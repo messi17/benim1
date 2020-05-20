@@ -9,7 +9,7 @@ let opacity = 100;
 let sepia = 0;
 let dropshadow = 0;
  
-const video = document.getElementById("video");
+const imgture = document.getElementById("video");
 const resetAll = document.getElementById("resetAll");
  
 const slider1 = document.getElementById("slider1");
