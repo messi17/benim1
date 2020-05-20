@@ -9,7 +9,7 @@ let opacity = 100;
 let sepia = 0;
 let dropshadow = 0;
  
-const imgture = document.getElementById("jwplayer jw-reset jw-state-paused jw-stretch-uniform jw-flag-aspect-mode jw-breakpoint-5 jw-floating-dismissible jw-flag-user-inactive");
+const imgture = document.getElementById("player");
 const resetAll = document.getElementById("resetAll");
  
 const slider1 = document.getElementById("slider1");
