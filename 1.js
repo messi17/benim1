@@ -9,7 +9,7 @@ let opacity = 100;
 let sepia = 0;
 let dropshadow = 0;
  
-const imgture = document.getElementById("myElement");
+const imgture = document.getElementById("jw-video jw-reset");
 const resetAll = document.getElementById("resetAll");
  
 const slider1 = document.getElementById("slider1");
@@ -77,7 +77,7 @@ resetAll.addEventListener("click", function() {
 	value6.innerHTML = slider6.value + "px";
 	blur = 0;
 	slider7.value = 0;
-	value7.innerHTML = slider7.value + "°";
+	value7.innerHTML = slider7.value + "Â°";
 	opacity = 100;
 	slider8.value = 0;
 	value8.innerHTML = 100 - slider8.value + "%";
@@ -168,7 +168,7 @@ slider5.addEventListener("blur", function() {
  
 //Hue-rotate slider
 slider6.addEventListener("input", function() {
-	value6.innerHTML = slider6.value + "°";
+	value6.innerHTML = slider6.value + "Â°";
 	huerotate = slider6.value;
 	updateFilters();
 });
