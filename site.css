@@ -1,0 +1,100 @@
+﻿body {
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a:link {
+    color: #336699;
+}
+
+a:visited {
+    color: #336699;
+}
+    /* Set widths on the form inputs since otherwise they're 100% wide */
+    input, select, textarea {
+    max-width: 280px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"]
+{
+    width: 100%;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+  /* Hide captions */
+  .carousel-caption {
+    display: none
+  }
+}
+
+/* -------------------------
+   PlayReady specific styles 
+   -------------------------*/
+
+table
+{
+    border: 1px solid #ddd;
+    width: 100%;
+}
+
+th
+{
+    padding: 1em;
+    border: 1px solid #ddd;
+    background-color: #346a92;
+    color: #fff;
+}
+
+tr
+{
+    padding: 0.5em;
+    border: 1px solid #ddd;
+}
+
+td
+{
+    padding: 0.5em;
+    border: 1px solid #ddd;
+}
+
+.table-examples table
+{
+    width: 100%;
+    table-layout: fixed;
+}
+
+.table-examples th
+{
+}
+
+.table-examples tr
+{
+}
+
+.table-examples td
+{
+}
+
+.table-contents-col1
+{
+    width: 20%;
+}
+
+.table-contents-col2
+{
+    width: 80%;
+}
