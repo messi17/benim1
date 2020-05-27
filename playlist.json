@@ -1,1 +1,103 @@
-{"proxy_url":"https://digiturk-drm.ercdn.com/widevine/api/erproxy","ticket_list":[{"ticket":"st=IUbBrI2VcUjUZgO2PW1iDw&e=1590663136&userid=ed7810644","octoshape_ticket":null,"ticket_type":0,"ticket_type_str":"CdnTicket","cdn_uri_with_ticket":"https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/playlist.m3u8?st=IUbBrI2VcUjUZgO2PW1iDw&e=1590663136&userid=ed7810644"}],"drm_token":"Bearer ","multi_play_session_key":"182C75A06C8D471F9D834E19C740F8F181D0DC91D305432B9C251B055957DC1E","usage_spec_id":null,"channel_content_id":"162974","errCode":"OK","message":null,"ErrorMessage":null,"statusCode":200,"accessToken":null,"isLogin":true}
+{
+  "playlist": [
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1-thumbnail.jpg",
+      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/inline-linear-1.xml?cb=__timestamp__",
+      "contentTitle": "Playlist Item 1",
+      "contentDescription": "Description for playlist item 1"
+    },
+    {
+      "src": {
+        "hls": "https://dt-amd.akamaized.net/nba/smarttv.isml/smarttv-audio-ORJ=96000-video=400000.m3u8 "
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-2.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-2-thumbnail.jpg",
+      "contentTitle": "Playlist Item 2",
+      "contentDescription": "Description for playlist item 2"
+    },
+    {
+      "src": {
+        "hls": "https://mtvhits-bc-dt-hls.secure.footprint.net/egress/ahandler/bein/mtvhits/mtvhits.isml/mtvhits.mpd?nvb=1559583686&nva=1559756486&token=0be0c8d42bbc732c2e07d"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-3.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-3-thumbnail.jpg",
+      "adTagUrl": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dlinear&correlator=__timestamp__",
+      "contentTitle": "Playlist Item 3",
+      "contentDescription": "Description for playlist item 3"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:sintel-hd.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-4.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-4-thumbnail.jpg",
+      "adTagUrl": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=__timestamp__",
+      "contentTitle": "Playlist Item 4",
+      "contentDescription": "Description for playlist item 4"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:tos-v2.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-5.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-5-thumbnail.jpg",
+      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/vpaid-1-js-linear.xml?cb=__timestamp__",
+      "contentTitle": "Playlist Item 5",
+      "contentDescription": "Description for playlist item 5"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:b-long.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-6.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-6-thumbnail.jpg",
+      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/non-linear.xml?cb=__timestamp__",
+      "contentTitle": "Playlist Item 6",
+      "contentDescription": "Description for playlist item 6"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:sintel-4k.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-7.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-7-thumbnail.jpg",
+      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/inline-linear.xml?cb=__timestamp__",
+      "contentTitle": "Playlist Item 7",
+      "contentDescription": "Description for playlist item 7"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:b-toolong.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-8.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-8-thumbnail.jpg",
+      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/inline-linear-skippable.xml?cb=__timestamp__",
+      "contentTitle": "Playlist Item 8",
+      "contentDescription": "Description for playlist item 8"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:hls-maudios-prod.smil/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-9.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-9-thumbnail.jpg",
+      "adTagUrl": "https://pubads.g.doubleclick.net/gampad/ads?sz=640x480&iu=/124319096/external/single_ad_samples&ciu_szs=300x250&impl=s&gdfp_req=1&env=vp&output=vast&unviewed_position_start=1&cust_params=deployment%3Ddevsite%26sample_ct%3Dskippablelinear&correlator=__timestamp__",
+      "contentTitle": "Playlist Item 9",
+      "contentDescription": "Description for playlist item 9"
+    },
+    {
+      "src": {
+        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/mp4:slider.mp4/playlist.m3u8"
+      },
+      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-10.jpg",
+      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-10-thumbnail.jpg",
+      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/inline-linear-1.xml?cb=__timestamp__",
+      "contentTitle": "Playlist Item 10",
+      "contentDescription": "Description for playlist item 10"
+    }
+  ]
+}
