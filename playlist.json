@@ -2,7 +2,7 @@
   "playlist": [
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/playlist.m3u8"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP1.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1-thumbnail.jpg",
@@ -12,7 +12,7 @@
     },
     {
       "src": {
-        "hls": "https://dt-amd.akamaized.net/nba/smarttv.isml/smarttv-audio-ORJ=96000-video=400000.m3u8 "
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP2.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-2.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-2-thumbnail.jpg",
@@ -21,7 +21,7 @@
     },
     {
       "src": {
-        "hls": "https://mtvhits-bc-dt-hls.secure.footprint.net/egress/ahandler/bein/mtvhits/mtvhits.isml/mtvhits.mpd?nvb=1559583686&nva=1559756486&token=0be0c8d42bbc732c2e07d"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP3.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-3.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-3-thumbnail.jpg",
@@ -31,7 +31,7 @@
     },
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:sintel-hd.smil/playlist.m3u8"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP4.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-4.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-4-thumbnail.jpg",
@@ -41,7 +41,7 @@
     },
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:tos-v2.smil/playlist.m3u8"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP5.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-5.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-5-thumbnail.jpg",
@@ -51,7 +51,7 @@
     },
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:b-long.smil/playlist.m3u8"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP6.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-6.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-6-thumbnail.jpg",
@@ -61,7 +61,7 @@
     },
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:sintel-4k.smil/playlist.m3u8"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP7.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-7.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-7-thumbnail.jpg",
@@ -71,7 +71,7 @@
     },
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:b-toolong.smil/playlist.m3u8"
+        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP8.smil/chunklist.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-8.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-8-thumbnail.jpg",
