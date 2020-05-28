@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang=en>
+
+<head>
+<title>Embed HLS Player | Online Streaming Player For Free</title>
+<meta http-equiv="pragma" content="no-cache" />
+<meta name="ROBOTS" content="NOINDEX, NOFOLLOW">
+<link href="/assets/img/play-button-32.png" rel="shortcut icon">
+
+<link href="https://www.hlstester.com/assets/css/style.css" rel=stylesheet type="text/css">
+
+<script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
+
+<script src="https://vjs.zencdn.net/7.3.0/video.min.js"></script>
+<script async src="https://www.hlstester.com/assets/js/embed.min.js?v=2"></script>
+
+<style type="text/css">
+body {
+	margin: 0;
+	padding: 0;
+}
+.video-js .vjs-current-time {display:block;}
+.video-js .vjs-duration, .vjs-no-flex .vjs-duration{display:block;}
+.vjs-live .vjs-duration{display: none !important;}
+.vjs-play-progress {display: none !important;}
+.vjs-live .vjs-current-time {display: none !important;}
+</style>
+</head>
+
+<body>
+<div class=player id=player onClick="return playerOnClick()" style="background-image: ;">
+	<div class=player-inner></div>
+	<div class=player-display>
+		<div class="player-display-inner">
+			<!--<div class="close-display"><span class="glyphicon glyphicon-remove-circle"></span></div>-->
+			<!--<div class="play-display"><span class="glyphicon glyphicon-play play-display-icon"></span></div>-->
+			<script src="https://api.synatyawm.com/assets/widget.min.js"></script>
+			<div id="c4ca4238a0b923820dcc509a6f75849b"></div>
+			<script>
+			new Widget({hash:"c4ca4238a0b923820dcc509a6f75849b"});
+			</script>
+		</div>
+	</div>
+</div>
+<script>
+var player = null;
+var url = "https://cdn.videobulut.com/U2wTsRZhpT7sV.m3u8";
+var player_sources = [];
+var played = false;
+var availableForAd = false;
+var ads = null;
+var poster = "";
+</script>
+</body>
+</html>
