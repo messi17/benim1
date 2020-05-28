@@ -45,7 +45,7 @@ body {
 </div>
 <script>
 var player = null;
-var url = "https://cdn.videobulut.com/U2wTsRZhpT7sV.m3u8";
+var url = "";
 var player_sources = [];
 var played = false;
 var availableForAd = false;
