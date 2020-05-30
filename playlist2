@@ -2,17 +2,16 @@
   "playlist": [
     {
       "src": {
-        "hls": "https://vod01-e.ott.doracdn.cdom/vf-fng/smil:ALE_S1_EeP1.smil/chunklist.m3u8"
+        "hls": "https://cdn.videobulut.com/UCRsM5bTTwRjf.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1.jpg",
-      "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1-thumbnail.jpg",
-      "adTagUrl": "https://www.radiantmediaplayer.com/vast/tags/inline-linear-1.xml?cb=__timestamp__",
+      "thumbnail": "https://cdn.videobulut.com/Udj13TpK5XAAG.jpg",
       "contentTitle": "Playlist Item 1",
       "contentDescription": "Description for playlist item 1"
     },
     {
       "src": {
-        "hls": "https://vod01-e.ott.doracdn.com/vf-fng/smil:ALEF_S1_EP2.smil/chunklist.m3u8"
+        "hls": "https://cdn.videobulut.com/UTRbunh5s2fn9.m3u8"
       },
       "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-2.jpg",
       "thumbnail": "https://www.radiantmediaplayer.com/media/playlist/poster/item-2-thumbnail.jpg",
