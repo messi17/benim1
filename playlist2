@@ -2,9 +2,9 @@
   "playlist": [
     {
       "src": {
-        "hls": "https://cdn.videobulut.com/UCRsM5bTTwRjf.m3u8"
+        "hls": "https://cdn.videobulut.combTTwRjf.m3u8"
       },
-      "poster": "https://www.radiantmediaplayer.com/media/playlist/poster/item-1.jpg",
+      "poster": "",
       "thumbnail": "https://cdn.videobulut.com/Udj13TpK5XAAG.jpg",
       "contentTitle": "Playlist Item 1",
       "contentDescription": "Description for playlist item 1"
