@@ -2,7 +2,7 @@
   "playlist": [
     {
       "src": {
-        "hls": "https://umt01.videobulut.com/35/3165/pRsEfG1s57n3/pRsEfG1s57n3.m3u8"
+        "dash": "https://umt01.videobulut.com/35/3165/pRsEfG1s57n3/pRsEfG1s57n3.mpd"
       },
       "poster": "",
       "thumbnail": "https://cdn.videobulut.com/Udj13TpK5XAAG.jpg",
