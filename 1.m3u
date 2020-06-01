@@ -1,0 +1,5 @@
+#EXTM3U
+#EXTINF:-1 $ExtFilter="LIVE",TRT-1
+http://cdn.videobulut.com/UEE6GXV1nZ6bK.m3u8
+#EXTINF:-1 $ExtFilter="LIVE",TRT-SPOR
+http://cdn.videobulut.com/UEE6GXV1nZ6bK.mpd
