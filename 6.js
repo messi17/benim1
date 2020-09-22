@@ -5,7 +5,7 @@ let grayscale = 0;
 let invert = 0;
 let huerotate = 0;
 let blur = 0;
-let opacity = 100;
+let opacity = 0;
 let sepia = 0;
 let dropshadow = 0;
  
