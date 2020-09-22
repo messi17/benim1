@@ -9,7 +9,7 @@ let opacity = 100;
 let sepia = 0;
 let dropshadow = 0;
  
-const imgture = document.getElementById("bitmovinplayer-video-player");
+const imgture = document.getElementById("bitmovinplayer-container aspect-16x9");
 const resetAll = document.getElementById("resetAll");
  
 const slider1 = document.getElementById("slider1");
