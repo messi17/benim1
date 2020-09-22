@@ -9,7 +9,7 @@ let opacity = 100;
 let sepia = 0;
 let dropshadow = 0;
  
-const imgture = document.getElementById("html");
+const imgture = document.getElementById("bitmovin-player");
 const resetAll = document.getElementById("resetAll");
  
 const slider1 = document.getElementById("slider1");
