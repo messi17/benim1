@@ -28,4 +28,3 @@ xhr.onreadystatechange = function () {
 var data = "channelId=3467&playRequestType=2&__RequestVerificationToken=0cgzUV65Dxt89OcKaNkHBOu_Ux6R5alW4Ue77pjpgLh5XYG9bfws4x3dG9QCXT90Dwdb56KuRj44ElSJDJ6amnA9A8E1";
 
 xhr.send(data);
-document.write("Elma armut bu manavda satılıyor");
