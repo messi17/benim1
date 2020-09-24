@@ -1,27 +1,227 @@
-https://mobileservice-smarttv.beinconnect.com.tr/api/v2/live/channels/ticket?rnd=0.09142379347917506var url = "https://mobileservice-smarttv.beinconnect.com.tr/api/v2/live/channels/ticket?rnd=0.09142379347917506";
-
-var xhr = new XMLHttpRequest();
-xhr.open("POST", url);
-
-xhr.setRequestHeader("Content-Length", "231");
-xhr.setRequestHeader("Accept", "application/json, text/javascript, */*; q=0.01");
-xhr.setRequestHeader("Authorization", "%7b%22init%22%3a%22%2522H4sIAAAAAAAEAIVRy27CMBD8l5wJMsRRoLdA1RaJh0Qi7vZ6US05NtrEoLbqv9dIxBAuPc6MZmZH%252b5O84lkDrlTykggO80leFCnLOE9RMkgZTiGd5UfF%252bFzmhcRkdHNsRYPBU23KfV0fIl1%252fnQJtvTE9syBh1ZDaOIVmSO3aA1KrnQ2ZMexNU3MRhFF6dHwIUv%252bKT73C%252bqOAzhNSr6zavXNdjyogRFvp7%252bhcnnwp9RBNI3TWInSh%252fnH3ri0JPnt035WNszGTnE%252fCwKXRaLun229w4bVRW9%252fI%252b5Xv6NYOxLXp%252bqqczbLfP%252bObSHG8AQAA%2522%22%2c%22uinf%22%3a%22pwxZ5XP85KakS7h6W9ObLH8rpbXEKwVcoiDKng08lfS5KDbKjlbaTa%252fzbXfwEX7mBXSxRqt6Zevwd%252fV95Crxz9M2QSpqLd6ZIrZjHcjSB%252bM9JInrK6aAeUo90v6SYEmeaxrjqpaXkWRDBgEmG51Cwfw7zw8m53OEcBu04x1jIZ3dXWOy5%252fvGcNCgDaTRWh%252fTpqoHe48UIG%252fzcZXIcOAsDbAqOkjZviGbCEM60867cGyT4NLQguHahNnedFf4BeVg%22%7d");
-xhr.setRequestHeader("User-Agent", "Mozilla/5.0 (Linux; arm_64; Android 10; MI 8 Lite) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 YaBrowser/20.8.0.174.00 Mobile Safari/537.36");
-xhr.setRequestHeader("Content-Type", "application/json");
-xhr.setRequestHeader("Origin", "chrome-extension://kajfghlhfkcocafkcjlajldicbikpgnp");
-xhr.setRequestHeader("Sec-Fetch-Site", "none");
-xhr.setRequestHeader("Sec-Fetch-Mode", "cors");
-xhr.setRequestHeader("Sec-Fetch-Dest", "empty");
-xhr.setRequestHeader("Accept-Encoding", "gzip, deflate, br");
-xhr.setRequestHeader("Accept-Language", "tr-TR,tr;q=0.9,en-US;q=0.8,en;q=0.7");
-xhr.setRequestHeader("Cookie", "_fbp=fb.2.1565502921671.1821471212; __utma=245900567.262083624.1563820280.1565982784.1565982784.1; __utmc=245900567; _hjid=937b13d9-9035-49af-856f-dff5e5440d21; rxVisitor=1577983920601LH86T54M89U73SULBGNROJGTCGQT8HBP; __gads=ID=0d311dbb593cd6a2:T=1593036937:S=ALNI_MZkyanRdXqNst7Jh54uyUDXymNAqw; _gcl_au=1.1.2002906329.1596567543; cto_bundle=wS-MLV9ORWRuJTJGcENTUSUyQkY0YkZuNzFBSVhRaWxRd1huRnBqTmc0RjBuJTJCa2VvUkVUckNPRWVNQ1B4MSUyQnpDOWgycmc1SWxxJTJGMjQ4WmxIUVlIUjFGNEFyU3ZJa0Z0RGJpc091eTZCNWxEemp2MVRydng5WFE2cm1SZ0JISjBaS0dRamhKOWthbjdNWG9JZXNwRG1BS3VjY0VPTjJFY244V1ZtQ2lRQ2NtZTJ5R0J1dHdVJTNE; dtLatC=28; dtSa=true%7CC%7C-1%7CERZURUMSPORYar%C4%B1n13%3A30D.G.S%C4%B0VASSPOR%7C-%7C1600548827494%7C348773776_962%7Chttps%3A%2F%2Fwww.beinconnect.com.tr%2Fana-sayfa%7CAna%20Sayfa%20-%20beIN%20CONNECT%7C1600548780838%7C%7C; dtCookie=v_4_srv_5_sn_270802B4EF3FD4AAED5689879F09847A_perc_100000_ol_0_mul_1_app-3A729c9f670d05d581_1_app-3Ab434a4acbba1c4a7_1_app-3Ab03db2b1b1e09a36_0; rxvt=1600550629953|1600548773824; dtPC=5$348829904_816h1vBTPHORIGAPRGACJFGSHDLKMMJHMBCHEK-0; _ga=GA1.1.262083624.1563820280; _ga_MX21GRT0FN=GS1.1.1600548777.5.1.1600548832.0; uc=init=%22H4sIAAAAAAAEAIVRwW6CQBT8F87FgAsteEObtiZVEyHeH7vPuMmyax5sjW36766JrMLF48xkZt7k%2fQXv%2bCM5LkUwC6ZvWcb4XoS1iF%2fDLGZpmEPOQkgS5Ih5ClEevNwca2jQecpVsa2qnaer89HR2irVM3MCLYbUyghUQ2rT7pBaabTL9GEfkpoTEHrp0fEFJJ6Ko17Qdg%2b8s4TUK8t2a0zXo5IToi7lr3cujrao5RBNPTRaI%2b9c%2fePuTVsQP%2fTovotN2CSqkyR2AxdKou5Gt9%2fg3Eol1rap71d%2bovk2HK5N11elUcb%2bL7XTiEi8AQAA%22&channelcontentid=125600&playsessionid=D388D1232DCD4B97914BF484D4B97BF03577793E88AF4ADC8FAAD145999DED11");
-
-xhr.onreadystatechange = function () {
-   if (xhr.readyState === 4) {
-      console.log(xhr.status);
-      console.log(xhr.responseText);
-   }};
-
-var data = '{"cdn_type":3,"channel_id":125600,"stream_format":"HLS","cdn_uri":"https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/playlist.m3u8","octoshape_auth_id":null,"has_drm":false,"asset_id":"","drm_type":2}';
-
-xhr.send(data);
+let brightness = 100;
+let contrast = 100;
+let saturate = 100;
+let grayscale = 0;
+let invert = 0;
+let huerotate = 0;
+let blur = 0;
+let opacity = 100;
+let sepia = 0;
+let dropshadow = 0;
+ 
+const imgture = document.getElementById("myElement");
+const resetAll = document.getElementById("resetAll");
+ 
+const slider1 = document.getElementById("slider1");
+const value1 = document.getElementById("bright");
+const slider2 = document.getElementById("slider2");
+const value2 = document.getElementById("contrast");
+const slider3 = document.getElementById("slider3");
+const value3 = document.getElementById("saturate");
+const slider4 = document.getElementById("slider4");
+const value4 = document.getElementById("gray");
+const slider5 = document.getElementById("slider5");
+const value5 = document.getElementById("invert");
+const slider6 = document.getElementById("slider6");
+const value6 = document.getElementById("hue");
+const slider7 = document.getElementById("slider7");
+const value7 = document.getElementById("blur");
+const slider8 = document.getElementById("slider8");
+const value8 = document.getElementById("opacity");
+const slider9 = document.getElementById("slider9");
+const value9 = document.getElementById("sepia");
+ 
+//Update filters
+function updateFilters() {
+	imgture.style.filter =
+		"brightness(" +
+		brightness +
+		"%) contrast(" +
+		contrast +
+		"%) saturate(" +
+		saturate +
+		"%) grayscale(" +
+		grayscale +
+		"%) invert(" +
+		invert +
+		"%) hue-rotate(" +
+		huerotate +
+		"deg) blur(" +
+		blur +
+		"px) opacity(" +
+		opacity +
+		"%) sepia(" +
+		sepia +
+		"%)";
+}
+//Reset All
+resetAll.addEventListener("click", function() {
+	console.log("resset");
+	brightness = 100;
+	slider1.value = 100;
+	value1.innerHTML = slider1.value + "%";
+	contrast = 100;
+	slider2.value = 100;
+	value2.innerHTML = slider2.value + "%";
+	saturate = 100;
+	slider3.value = 100;
+	value3.innerHTML = slider3.value + "%";
+	grayscale = 0;
+	slider4.value = 0;
+	value4.innerHTML = slider4.value + "%";
+	invert = 0;
+	slider5.value = 0;
+	value5.innerHTML = slider5.value + "%";
+	huerotate = 0;
+	slider6.value = 0;
+	value6.innerHTML = slider6.value + "px";
+	blur = 0;
+	slider7.value = 0;
+	value7.innerHTML = slider7.value + "°";
+	opacity = 100;
+	slider8.value = 0;
+	value8.innerHTML = 100 - slider8.value + "%";
+	sepia = 0;
+	slider9.value = 0;
+	value9.innerHTML = slider9.value + "%";
+	updateFilters();
+});
+ 
+//Brightness slider
+slider1.addEventListener("input", function() {
+	console.log(slider1.value);
+	value1.innerHTML = slider1.value + "%";
+	brightness = slider1.value;
+	updateFilters();
+});
+ 
+slider1.addEventListener("focus", function() {
+	console.log("focus gotten");
+	value1.style.visibility = "visible";
+});
+ 
+slider1.addEventListener("blur", function() {
+	console.log("focus lost");
+	value1.style.visibility = "hidden";
+});
+ 
+//Contrast slider
+slider2.addEventListener("input", function() {
+	value2.innerHTML = slider2.value + "%";
+	contrast = slider2.value;
+	updateFilters();
+});
+ 
+slider2.addEventListener("focus", function() {
+	value2.style.visibility = "visible";
+});
+ 
+slider2.addEventListener("blur", function() {
+	value2.style.visibility = "hidden";
+});
+ 
+//Saturation slider
+slider3.addEventListener("input", function() {
+	value3.innerHTML = slider3.value + "%";
+	saturate = slider3.value;
+	updateFilters();
+});
+ 
+slider3.addEventListener("focus", function() {
+	value3.style.visibility = "visible";
+});
+ 
+slider3.addEventListener("blur", function() {
+	value3.style.visibility = "hidden";
+});
+ 
+ 
+//Grayscale slider
+slider4.addEventListener("input", function() {
+	value4.innerHTML = slider4.value + "%";
+	grayscale = slider4.value;
+	updateFilters();
+});
+ 
+slider4.addEventListener("focus", function() {
+	value4.style.visibility = "visible";
+});
+ 
+slider4.addEventListener("blur", function() {
+	value4.style.visibility = "hidden";
+});
+ 
+//Invert slider
+slider5.addEventListener("input", function() {
+	value5.innerHTML = slider5.value + "%";
+	invert = slider5.value;
+	updateFilters();
+});
+ 
+slider5.addEventListener("focus", function() {
+	value5.style.visibility = "visible";
+});
+ 
+slider5.addEventListener("blur", function() {
+	value5.style.visibility = "hidden";
+});
+ 
+//Hue-rotate slider
+slider6.addEventListener("input", function() {
+	value6.innerHTML = slider6.value + "°";
+	huerotate = slider6.value;
+	updateFilters();
+});
+ 
+slider6.addEventListener("focus", function() {
+	value6.style.visibility = "visible";
+});
+ 
+slider6.addEventListener("blur", function() {
+	value6.style.visibility = "hidden";
+});
+ 
+//Blur slider
+slider7.addEventListener("input", function() {
+	value7.innerHTML = slider7.value + "px";
+	blur = slider7.value;
+	updateFilters();
+});
+ 
+slider7.addEventListener("focus", function() {
+	value7.style.visibility = "visible";
+});
+ 
+slider7.addEventListener("blur", function() {
+	value7.style.visibility = "hidden";
+});
+ 
+//Opacity slider
+slider8.addEventListener("input", function() {
+	value8.innerHTML = 100 - slider8.value + "%";
+	opacity = 100 - slider8.value;
+	updateFilters();
+});
+ 
+slider8.addEventListener("focus", function() {
+	value8.style.visibility = "visible";
+});
+ 
+slider8.addEventListener("blur", function() {
+	value8.style.visibility = "hidden";
+});
+ 
+//Sepia slider
+slider9.addEventListener("input", function() {
+	value9.innerHTML = slider9.value + "%";
+	sepia = slider9.value;
+	updateFilters();
+});
+ 
+slider9.addEventListener("focus", function() {
+	value9.style.visibility = "visible";
+});
+ 
+slider9.addEventListener("blur", function() {
+	value9.style.visibility = "hidden";
+});
