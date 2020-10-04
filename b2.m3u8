@@ -2,19 +2,22 @@
 #EXT-X-VERSION:5
 
 # AUDIO groups
-#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-aacl-96",NAME="Turkish",LANGUAGE="tr",AUTOSELECT=YES,DEFAULT=YES,CHANNELS="2"
+#EXT-X-MEDIA:TYPE=AUDIO,GROUP-ID="audio-aacl-128",NAME="Turkish",LANGUAGE="tr",AUTOSELECT=YES,DEFAULT=YES,CHANNELS="2"
 
 # variants
-#EXT-X-STREAM-INF:BANDWIDTH=579000,AVERAGE-BANDWIDTH=526000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=1920x1080,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//bein_sports_01-audio_tur=96000-video=400000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
-#EXT-X-STREAM-INF:BANDWIDTH=1045000,AVERAGE-BANDWIDTH=950000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=1920x1080,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//bein_sports_01-audio_tur=96000-video=800000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
-#EXT-X-STREAM-INF:BANDWIDTH=1512000,AVERAGE-BANDWIDTH=1374000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=1920x1080,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//bein_sports_01-audio_tur=96000-video=1200000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
-#EXT-X-STREAM-INF:BANDWIDTH=2211000,AVERAGE-BANDWIDTH=2010000,CODECS="mp4a.40.2,avc1.4D4029",RESOLUTION=1920x1080,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//bein_sports_01-audio_tur=96000-video=1800000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
+#EXT-X-STREAM-INF:BANDWIDTH=616000,AVERAGE-BANDWIDTH=560000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=1920x1080,AUDIO="audio-aacl-128",CLOSED-CAPTIONS=NONE
+https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/bein_sports_02-audio_tur=128000-video=400000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
+#EXT-X-STREAM-INF:BANDWIDTH=1199000,AVERAGE-BANDWIDTH=1090000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=1920x1080,AUDIO="audio-aacl-128",CLOSED-CAPTIONS=NONE
+https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/bein_sports_02-audio_tur=128000-video=900000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
+#EXT-X-STREAM-INF:BANDWIDTH=1899000,AVERAGE-BANDWIDTH=1726000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=1920x1080,AUDIO="audio-aacl-128",CLOSED-CAPTIONS=NONE
+https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/bein_sports_02-audio_tur=128000-video=1500000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
+#EXT-X-STREAM-INF:BANDWIDTH=2249000,AVERAGE-BANDWIDTH=2044000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=1920x1080,AUDIO="audio-aacl-128",CLOSED-CAPTIONS=NONE
+https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/bein_sports_02-audio_tur=128000-video=1800000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
+#EXT-X-STREAM-INF:BANDWIDTH=2948000,AVERAGE-BANDWIDTH=2680000,CODECS="mp4a.40.2,avc1.4D4029",RESOLUTION=1920x1080,AUDIO="audio-aacl-128",CLOSED-CAPTIONS=NONE
+https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/bein_sports_02-audio_tur=128000-video=2400000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644
 
 # keyframes
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=59000,CODECS="avc1.4D401E",RESOLUTION=1920x1080,URI="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//keyframes/bein_sports_01-video=400000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=117000,CODECS="avc1.4D401E",RESOLUTION=1920x1080,URI="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//keyframes/bein_sports_01-video=800000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=175000,CODECS="avc1.4D401F",RESOLUTION=1920x1080,URI="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml//keyframes/bein_sports_01-video=1200000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=59000,CODECS="avc1.4D401E",RESOLUTION=1920x1080,URI="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/keyframes/bein_sports_02-video=400000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=132000,CODECS="avc1.4D401E",RESOLUTION=1920x1080,URI="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/keyframes/bein_sports_02-video=900000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=219000,CODECS="avc1.4D401E",RESOLUTION=1920x1080,URI="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/keyframes/bein_sports_02-video=1500000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=263000,CODECS="avc1.4D401F",RESOLUTION=1920x1080,URI="khttps://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_02/bein_sports_02.isml/eyframes/bein_sports_02-video=1800000.m3u8?st=Ot4IdQ4MMQIo2IGxYgMjGQ&e=1601900796&userid=ed7810644"
