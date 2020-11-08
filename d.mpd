@@ -30,7 +30,7 @@
   <AdaptationSet segmentAlignment="true" lang="eng">
    <Role schemeIdUri="urn:cust:dash:role:2016" value="2"/>
    <SegmentTemplate media="$RepresentationID$/$RepresentationID$_$Number$.m4s" timescale="48000" startNumber="1" duration="288000" initialization="$RepresentationID$/$RepresentationID$_.mp4"/>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/A_5/A_6" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1" bandwidth="99216">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/A_6/A_6" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1" bandwidth="99216">
     <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
    </Representation>
   </AdaptationSet>
