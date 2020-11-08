@@ -9,28 +9,28 @@
    <InbandEventStream schemeIdUri="urn:scte:scte35:2013:xml" value="0"/>
    <Role schemeIdUri="urn:cust:dash:role:2016" value="0"/>
    <SegmentTemplate media="$RepresentationID$/$RepresentationID$_$Number$.m4s" timescale="25000" startNumber="1" duration="150000" initialization="$RepresentationID$/$RepresentationID$_.mp4"/>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_0/V_0_.mp4" mimeType="video/mp4" codecs="avc1.640032" width="1920" height="1080" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="4414716">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_0/V_0" mimeType="video/mp4" codecs="avc1.640032" width="1920" height="1080" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="4414716">
    </Representation>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_1/V_1_.mp4" mimeType="video/mp4" codecs="avc1.4D4020" width="1280" height="720" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="3015709">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_1/V_1" mimeType="video/mp4" codecs="avc1.4D4020" width="1280" height="720" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="3015709">
    </Representation>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_2/V_2_.mp4" mimeType="video/mp4" codecs="avc1.4D401F" width="960" height="540" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="1375797">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_2/V_2" mimeType="video/mp4" codecs="avc1.4D401F" width="960" height="540" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="1375797">
    </Representation>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_3/V_3_.mp4" mimeType="video/mp4" codecs="avc1.4D401F" width="640" height="360" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="768874">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_3/V_3" mimeType="video/mp4" codecs="avc1.4D401F" width="640" height="360" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="768874">
    </Representation>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_4/V_4_.mp4" mimeType="video/mp4" codecs="avc1.4D401F" width="512" height="288" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="430673">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/V_4/V_4" mimeType="video/mp4" codecs="avc1.4D401F" width="512" height="288" frameRate="25" sar="1:1" startWithSAP="0" bandwidth="430673">
    </Representation>
   </AdaptationSet>
   <AdaptationSet segmentAlignment="true" lang="tur">
    <Role schemeIdUri="urn:cust:dash:role:2016" value="1"/>
    <SegmentTemplate media="$RepresentationID$/$RepresentationID$_$Number$.m4s" timescale="48000" startNumber="1" duration="288000" initialization="$RepresentationID$/$RepresentationID$_.mp4"/>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/A_5/A_5_.mp4" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1" bandwidth="99282">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/A_5/A_5" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1" bandwidth="99282">
     <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
    </Representation>
   </AdaptationSet>
   <AdaptationSet segmentAlignment="true" lang="eng">
    <Role schemeIdUri="urn:cust:dash:role:2016" value="2"/>
    <SegmentTemplate media="$RepresentationID$/$RepresentationID$_$Number$.m4s" timescale="48000" startNumber="1" duration="288000" initialization="$RepresentationID$/$RepresentationID$_.mp4"/>
-   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/A_5/A_6_.mp4" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1" bandwidth="99216">
+   <Representation id="https://umt01.videobulut.com/35/3165/dpusy32jXEAh/A_5/A_6" mimeType="audio/mp4" codecs="mp4a.40.2" startWithSAP="1" bandwidth="99216">
     <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
    </Representation>
   </AdaptationSet>
