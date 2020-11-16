@@ -49,8 +49,8 @@
       <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
       <SegmentTemplate
         timescale="48000"
-        initialization="dizimax-comedy_org-$RepresentationID$.dash"
-        media="https://dt-live.ercdn.com/live/dizimax-comedy_org.isml/dash/dizimax-comedy_org-$RepresentationID$-$Time$.dash">
+        initialization="https://dt-live.ercdn.com/live/dizimax-comedy_org.isml/dash/dizimax-comedy_org-$RepresentationID$.dash"
+        media="dizimax-comedy_org-$RepresentationID$-$Time$.dash">
                 <SegmentTimeline>
           <S t="77064573747456" d="239616" />
           <S d="240640" />
@@ -6574,8 +6574,8 @@
       <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
       <SegmentTemplate
         timescale="25"
-        initialization="dizimax-comedy_org-$RepresentationID$.dash"
-        media="https://dt-live.ercdn.com/live/dizimax-comedy_org.isml/dash/dizimax-comedy_org-$RepresentationID$-$Time$.dash">
+        initialization="https://dt-live.ercdn.com/live/dizimax-comedy_org.isml/dash/dizimax-comedy_org-$RepresentationID$.dash"
+        media="dizimax-comedy_org-$RepresentationID$-$Time$.dash">
                 <SegmentTimeline>
           <S t="40137798702" d="125" r="8639" />
         </SegmentTimeline>
