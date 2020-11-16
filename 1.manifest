@@ -3093,7 +3093,7 @@
 		<c n="3084" d="20000000" />
 		<c n="3085" d="14400000" />
 	</StreamIndex>
-	<StreamIndex Type="audio" QualityLevels="1" Chunks="3055" Url="QualityLevels({bitrate})/Fragments(audio={start time})?st=W-D13tqFuzzht9oLW3M53Q&amp;e=1605570183">
+	<StreamIndex Type="audio" QualityLevels="1" Chunks="3055" Url="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/QualityLevels({bitrate})/Fragments(audio={start time})?st=W-D13tqFuzzht9oLW3M53Q&amp;e=1605570183">
 		<QualityLevel Index="0" Bitrate="95999" FourCC="AACL" SamplingRate="44100" Channels="2" BitsPerSample="16" PacketSize="4" AudioTag="255" CodecPrivateData="1210" />
 		<c n="0" d="20201361" />
 		<c n="1" d="20201361" />
