@@ -3,7 +3,7 @@
 		<BaseURL>dash/</BaseURL>
 		<AdaptationSet group="2" contentType="audio" minBandwidth="95999" maxBandwidth="95999" segmentAlignment="true" audioSamplingRate="44100" mimeType="audio/mp4" codecs="mp4a.40.2">
 			<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"></AudioChannelConfiguration>
-			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
+			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
 				<SegmentTimeline>
 					<S t="0" d="20201361" r="1"/>
 					<S d="20201360" />
