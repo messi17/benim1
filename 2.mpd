@@ -34,6 +34,7 @@
         initialization="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/dash/bein_sports_01-$RepresentationID$.dash"
         media="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/dash/bein_sports_01-$RepresentationID$-$Time$.dash">
                 <SegmentTimeline>
+          <S t="0" d="20000000" r="1"/> live ti
           <S d="95232" />
           <S d="96256" r="2" />
           <S d="95232" />
