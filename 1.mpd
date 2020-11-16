@@ -3,7 +3,7 @@
 		<BaseURL>dash/</BaseURL>
 		<AdaptationSet group="2" contentType="audio" minBandwidth="95999" maxBandwidth="95999" segmentAlignment="true" audioSamplingRate="44100" mimeType="audio/mp4" codecs="mp4a.40.2">
 			<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"></AudioChannelConfiguration>
-			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
+			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
 				<SegmentTimeline>
 					<S t="0" d="20201361" r="1"/>
 					<S d="20201360" />
@@ -2795,7 +2795,7 @@
 			<Representation id="audio=95999" bandwidth="95999"></Representation>
 		</AdaptationSet>
 		<AdaptationSet group="1" contentType="video" par="16:9" minBandwidth="493677" maxBandwidth="3383070" minWidth="512" maxWidth="1920" minHeight="288" maxHeight="1080" segmentAlignment="true" frameRate="25" mimeType="video/mp4" startWithSAP="1">
-			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
+			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
 				<SegmentTimeline>
 					<S t="0" d="20000000" r="3084"/>
 					<S d="14400000" />
