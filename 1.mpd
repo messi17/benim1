@@ -2792,7 +2792,7 @@
 					<S d="20373696" />
 				</SegmentTimeline>
 			</SegmentTemplate>
-			<Representation id="audio=95999" bandwidth="95999"></Representation>
+			<Representation id="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/dash/PT_DUB_ERSS_0000098104-audio=95999" bandwidth="95999"></Representation>
 		</AdaptationSet>
 		<AdaptationSet group="1" contentType="video" par="16:9" minBandwidth="493677" maxBandwidth="3383070" minWidth="512" maxWidth="1920" minHeight="288" maxHeight="1080" segmentAlignment="true" frameRate="25" mimeType="video/mp4" startWithSAP="1">
 			<SegmentTemplate timescale="10000000" initialization="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$.dash" media="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104-$RepresentationID$-$Time$.dash">
@@ -2801,11 +2801,11 @@
 					<S d="14400000" />
 				</SegmentTimeline>
 			</SegmentTemplate>
-			<Representation id="video=3383070" bandwidth="3383070" width="1920" height="1080" codecs="avc1.640028" scanType="progressive"></Representation>
-			<Representation id="video=2585259" bandwidth="2585259" width="1280" height="720" codecs="avc1.64001f" scanType="progressive"></Representation>
-			<Representation id="video=1985173" bandwidth="1985173" width="1280" height="720" codecs="avc1.4D401f" scanType="progressive"></Representation>
-			<Representation id="video=1089126" bandwidth="1089126" width="768" height="432" codecs="avc1.4D401e" scanType="progressive"></Representation>
-			<Representation id="video=493677" bandwidth="493677" width="512" height="288" codecs="avc1.4D4015" scanType="progressive"></Representation>
+			<Representation id="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/dash/PT_DUB_ERSS_0000098104-video=3383070" bandwidth="3383070" width="1920" height="1080" codecs="avc1.640028" scanType="progressive"></Representation>
+			<Representation id="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/dash/PT_DUB_ERSS_0000098104-video=2585259" bandwidth="2585259" width="1280" height="720" codecs="avc1.64001f" scanType="progressive"></Representation>
+			<Representation id="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/dash/PT_DUB_ERSS_0000098104-video=1985173" bandwidth="1985173" width="1280" height="720" codecs="avc1.4D401f" scanType="progressive"></Representation>
+			<Representation id="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/dash/PT_DUB_ERSS_0000098104-video=1089126" bandwidth="1089126" width="768" height="432" codecs="avc1.4D401e" scanType="progressive"></Representation>
+			<Representation id="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/dash/PT_DUB_ERSS_0000098104-video=493677" bandwidth="493677" width="512" height="288" codecs="avc1.4D4015" scanType="progressive"></Representation>
 		</AdaptationSet>
 	</Period>
 </MPD>
