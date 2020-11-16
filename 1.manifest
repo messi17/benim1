@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <SmoothStreamingMedia MajorVersion="2" MinorVersion="0" Duration="61714400000">
 	<StreamIndex Type="video" QualityLevels="5" Chunks="3086" Url="https://s3.dt.ercdn.com/s3/ss/t/pc/PT_DUB_ERSS_0000098104.ism/QualityLevels({bitrate})/Fragments(video={start time})?st=W-D13tqFuzzht9oLW3M53Q&amp;e=1605570183">
 		<QualityLevel Index="0" Bitrate="3383070" FourCC="H264" MaxWidth="1920" MaxHeight="1080" CodecPrivateData="0000000167640028ACD940780227E5C044000003000400000300CA3C60C6580000000168EBE152C8B0" />
