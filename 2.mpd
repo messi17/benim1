@@ -31,7 +31,7 @@
       <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main" />
       <SegmentTemplate
         timescale="48000"
-        initialization="bein_sports_01-$RepresentationID$.dash"
+        initialization="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/dash/bein_sports_01-$RepresentationID$.dash"
         media="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/dash/bein_sports_01-$RepresentationID$-$Time$.dash">
                 <SegmentTimeline>
           <S t="77066478620928" d="96256" r="1" />
@@ -733,7 +733,7 @@
       <SegmentTemplate
         timescale="90000"
         initialization="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/dash/bein_sports_01-$RepresentationID$.dash"
-        media="bein_sports_01-$RepresentationID$-$Time$.dash">
+        media="https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/dash/bein_sports_01-$RepresentationID$-$Time$.dash">
                 <SegmentTimeline>
           <S t="144499647240480" d="180000" r="1349" />
         </SegmentTimeline>
