@@ -1,0 +1,36 @@
+<style type="text/css">.bmpui-ui-watermark {
+  display: none;
+}</style> <script type="text/javascript" src="http://bitmovin-a.akamaihd.net/bitmovin-player/stable/8/bitmovinplayer.js"></script>
+<div id="player">&nbsp;</div>
+<script type="text/javascript">
+    const conf = {
+  key: '669a4369-809d-4378-bf65-5b35f9b991a4',
+  playback: {
+    autoplay: true
+  } 
+};
+    var source = {
+        hls: "//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_576p.m3u8",
+        poster: "//bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
+     };
+    var player = new bitmovin.player.Player(document.getElementById("player"), conf);
+    player.load(source).then(function () {
+        console.log('Successfully loaded source');
+    }, function () {
+        console.log('Error while loading source');
+    });
+</script><script>
+function switchChannel(channelID) { var source; if (channelID === '1') { source = { dash: 'https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/playlist.mpd?st=_c-w8jfVQCL_ISgNr4SQUQ&e=1607348798&userid=ed7810644'} } else if (channelID === '2') { source = { hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_576p.m3u8' } } else if  (channelID === '3') { source = { smooth: 'https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_01/bein_sports_01.isml/Manifest?st=_c-w8jfVQCL_ISgNr4SQUQ&e=1607348798&userid=ed7810644' } } else if (channelID === '4') { source = { hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_360p.m3u8' } } else if (channelID === '5') { source = { hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_720p.m3u8' } } else if (channelID === '6') { source = { hls: 'https://akamai2-me.cdn.booyah.live/hls/113134/27015545.m3u8' }; } else if (channelID === '7') { source = { smooth: 'https://bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_04/bein_sports_04.isml/Manifest?st=8oSf2ZTnrRSdmjN4rjtuyA&e=1607348228&userid=ed7810644' } } else if (channelID === '8') { source = { smooth: '//bein-tr-live.ercdn.com/connect_sh/bein/bein_sports_03/bein_sports_03.isml/Manifest?st=pMoAq3dXfYsc5K2fLsJ4rQ&e=1607344179&userid=ed7810644' } } player.load(source); } 
+  </script>
+<div class="col-md-4">
+<div class="row button-container"><br />
+<div class="col-md-12"><button class="channel-button btn btn-success" id="ch1" type="button" onclick="switchChannel('1', event)">412</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-warning" id="ch2" type="button" onclick="switchChannel('2', event)">728</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch3" type="button" onclick="switchChannel('3', event)">1100</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-success" id="ch4" type="button" onclick="switchChannel('4', event)">1645</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch5" type="button" onclick="switchChannel('5', event)">SİVASSPOR GEN&Ccedil;LERBİRLİĞİ</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch6" type="button" onclick="switchChannel('6', event)">ANKARAG&Uuml;C&Uuml; ANTALYASPOR</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch7" type="button" onclick="switchChannel('7', event)">beşiktaş fenerbah&ccedil;e</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch8" type="button" onclick="switchChannel('8', event)">beinsports2</button></div>
+</div>
+</div>
