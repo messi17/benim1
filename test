@@ -1,0 +1,104 @@
+A&ccedil;ılan kalite 900<style type="text/css">
+.bmpui-ui-watermark {
+  display: none;
+} </style>     <script type="text/javascript" src="//cdn.bitmovin.com/player/web/8/bitmovinplayer.js"></script>
+<div id="player">&nbsp;</div>
+<script>
+  const conf = {
+  key: '669a4369-809d-4378-bf65-5b35f9b991a4',
+  playback: {
+    autoplay: true,
+        },
+};
+    var source = {
+        hls: "//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_576p.m3u8",
+        poster: "//bitmovin-a.akamaihd.net/content/MI201109210084_1/poster.jpg"
+     };
+    var player = new bitmovin.player.Player(document.getElementById("player"), conf);
+    player.load(source).then(function () {
+        console.log('Successfully loaded source');
+    }, function () {
+        console.log('Error while loading source');
+    });
+  </script> <script>
+function switchChannel(channelID) {
+  var source;
+  if (channelID === '1') {
+    source = {
+      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01__720p.m3u8'
+    }
+  } else if (channelID === '2') {
+    source = {
+      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_720p.m3u8'
+    }
+  } else if (channelID === '3') {
+    source = {
+      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_576p.m3u8'
+    } 
+    } else if (channelID === '4') {
+    source = {
+      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_480p.m3u8'
+    }
+    } else if (channelID === '5') {
+    source = {
+      hls: '//bein-tr-ll-live.ercdn.com/bein_sports_01/bein_sports_01_360p.m3u8'
+    } 
+    } else if (channelID === '6') {
+    source = {
+      hls: 'https://tv-trtspor1.live.trt.com.tr/master.m3u8'
+    }
+    } else if (channelID === '7') {
+    source = {
+      hls: 'https://aspor.personamedia.tv/asporhls?fmt=hls'
+    }
+    } else if (channelID === '8') {
+    source = {
+      hls: '//stream1.profit.ro:1945/look/livestream/playlist.m3u8'
+    }
+    } else if (channelID === '9') {
+    source = {
+      hls: '//stream1.profit.ro:1945/looksport2/livestream/playlist.m3u8'
+    }
+    } else if (channelID === '10') {
+    source = {
+      hls: '//stream1.profit.ro:1945/looksport3/livestream/playlist.m3u8'
+    }
+    } else if (channelID === '11') {
+    source = {
+      hls: '//stream1.profit.ro:1945/lookplus/livestream/playlist.m3u8'
+    }
+    } else if (channelID === '12') {
+    source = {
+      hls: '//stream1.1616.ro:1945/looksportppv1/livestream/playlist.m3u8?wowzatokenendtime=1607484525&wowzatokenhash=BiAgEnBFfhXnlo9Z3uOMflJdf7c6bdEqurDLwJ80AW4=&wowzatokenstarttime=1607441325'
+    }
+    } else if (channelID === '13') {
+    source = {
+      hls: '//stream1.1616.ro:1945/looksportppv2/livestream/playlist.m3u8?wowzatokenendtime=1607484525&wowzatokenhash=BiAgEnBFfhXnlo9Z3uOMflJdf7c6bdEqurDLwJ80AW4=&wowzatokenstarttime=1607441325'
+    }
+    } else if (channelID === '14') {
+    source = {
+      hls: '//stream1.1616.ro:1945/looksportppv3/livestream/playlist.m3u8?wowzatokenendtime=1607484525&wowzatokenhash=BiAgEnBFfhXnlo9Z3uOMflJdf7c6bdEqurDLwJ80AW4=&wowzatokenstarttime=1607441325'
+    }
+    } else if (channelID === '15') {
+    source = {
+      hls: '//stream1.1616.ro:1945/looksportppv4/livestream/playlist.m3u8?wowzatokenendtime=1607484525&wowzatokenhash=BiAgEnBFfhXnlo9Z3uOMflJdf7c6bdEqurDLwJ80AW4=&wowzatokenstarttime=1607441325'
+  } } player.load(source); } </script>
+<div class="col-md-4">
+<div class="row button-container">
+<div class="col-md-12"><button class="channel-button btn btn-success" id="ch1" type="button" onclick="switchChannel('1', event)">2400 Kalite</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-warning" id="ch2" type="button" onclick="switchChannel('2', event)">1800 kalite</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch3" type="button" onclick="switchChannel('3', event)">1500 kalite</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-success" id="ch4" type="button" onclick="switchChannel('4', event)">900 kalite</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch5" type="button" onclick="switchChannel('5', event)">400 kalite</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-success" id="ch6" type="button" onclick="switchChannel('6', event)">trt spor</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch7" type="button" onclick="switchChannel('7', event)">a spor</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch8" type="button" onclick="switchChannel('8', event)">look sport</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch9" type="button" onclick="switchChannel('9', event)">look sport 2</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch10" type="button" onclick="switchChannel('10', event)">look sport 3</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch11" type="button" onclick="switchChannel('11', event)">look sport plus</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch12" type="button" onclick="switchChannel('12', event)">look sport ppv 1</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch13" type="button" onclick="switchChannel('13', event)">look sport ppv 2</button></div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch14" type="button" onclick="switchChannel('14', event)">look sport ppv 3</button></div>
+</div>
+<div class="col-md-12"><button class="channel-button btn btn-primary" id="ch15" type="button" onclick="switchChannel('15', event)">look sport ppv 4</button></div>
+</div>
