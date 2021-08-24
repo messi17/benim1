@@ -16,7 +16,7 @@
     Language="tur"
     Name="audio_tur"
     Chunks="10800"
-    Url="https://bein-tr-live.ercdn.com/connect/bein/bein_sports_01/bein_sports_01.isml/QualityLevels({128000})/Fragments(audio_tur={16298033650090834})?userid=ed7810644">
+    Url="https://bein-tr-live.ercdn.com/connect_lv/bein/bein_sports_01/bein_sports_01.isml/QualityLevels(2400000)/Fragments(video=16298033930853334)?userid=ed7810644">
     <QualityLevel
       Index="0"
       Bitrate="128000"
