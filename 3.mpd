@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--Generated with https://github.com/google/shaka-packager version v2.2.1-3541166283-release-->
+<MPD xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xlink="http://www.w3.org/1999/xlink" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 DASH-MPD.xsd" xmlns:cenc="urn:mpeg:cenc:2013" profiles="urn:mpeg:dash:profile:isoff-on-demand:2011" minBufferTime="PT2S" type="static" mediaPresentationDuration="PT6252.64013671875S">
+  <Period id="0">
+    <AdaptationSet id="0" contentType="audio" lang="tr" subsegmentAlignment="true">
+      <Role schemeIdUri="urn:mpeg:dash:role:2011" value="main"/>
+      <Representation id="0" bandwidth="102089" codecs="mp4a.40.2" mimeType="audio/mp4" audioSamplingRate="44100">
+        <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+        <BaseURL>https://s7.dt.ercdn.com/s7/mpd/J/6G/PT_MUL_DASH_0000075032/FB_ANTALYA_90DK_102089.mp4</BaseURL>
+        <SegmentBase indexRange="822-38377" timescale="44100">
+          <Initialization range="0-821"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+    <AdaptationSet id="1" contentType="video" maxWidth="1920" maxHeight="1080" frameRate="12800/512" subsegmentAlignment="true" par="16:9">
+      <Representation id="1" bandwidth="820992" codecs="avc1.4d4015" mimeType="video/mp4" sar="1:1" width="512" height="288">
+        <BaseURL>https://s7.dt.ercdn.com/s7/mpd/J/6G/PT_MUL_DASH_0000075032/video_820992_288p.mp4</BaseURL>
+        <SegmentBase indexRange="862-38417" timescale="12800">
+          <Initialization range="0-861"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="2" bandwidth="1770708" codecs="avc1.4d401e" mimeType="video/mp4" sar="1:1" width="768" height="432">
+        <BaseURL>https://s7.dt.ercdn.com/s7/mpd/J/6G/PT_MUL_DASH_0000075032/video_1770708_432p.mp4</BaseURL>
+        <SegmentBase indexRange="862-38417" timescale="12800">
+          <Initialization range="0-861"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="3" bandwidth="2726308" codecs="avc1.4d401f" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <BaseURL>https://s7.dt.ercdn.com/s7/mpd/J/6G/PT_MUL_DASH_0000075032/video_2726308_720p.mp4</BaseURL>
+        <SegmentBase indexRange="864-38419" timescale="12800">
+          <Initialization range="0-863"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="4" bandwidth="4203620" codecs="avc1.64001f" mimeType="video/mp4" sar="1:1" width="1280" height="720">
+        <BaseURL>https://s7.dt.ercdn.com/s7/mpd/J/6G/PT_MUL_DASH_0000075032/video_4203620_720p.mp4</BaseURL>
+        <SegmentBase indexRange="870-38425" timescale="12800">
+          <Initialization range="0-869"/>
+        </SegmentBase>
+      </Representation>
+      <Representation id="5" bandwidth="5399948" codecs="avc1.640028" mimeType="video/mp4" sar="1:1" width="1920" height="1080">
+        <BaseURL>https://s7.dt.ercdn.com/s7/mpd/J/6G/PT_MUL_DASH_0000075032/video_5399948_1080p.mp4</BaseURL>
+        <SegmentBase indexRange="871-38426" timescale="12800">
+          <Initialization range="0-870"/>
+        </SegmentBase>
+      </Representation>
+    </AdaptationSet>
+  </Period>
+</MPD>
