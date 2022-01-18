@@ -4,10 +4,10 @@ var BitmovinPlayer = function () {
     var urlLicenseWidevineErstream = "";
     var urlLicensePlayreadyErstream = "https://digiturk-drm.ercdn.com/playready/rightsmanager.asmx?op=AcquireLicense";
     var urlLicenseFairplayErstream = "https://castleblack.digiturk.com.tr/api/fairplay/license?version=#version#";
-    var urlLicenseWidevineCastleblack = "https://castleblack.digiturk.com.tr/api/widevine/license?version=1.0";
+    var urlLicenseWidevineCastleblack = "https://castleblack.digiturk.com.tr/api/widevine/license?version=#version#";
     var urlLicensePlayreadyCastleblack = "https://castleblack.digiturk.com.tr/api/playready/license?version=#version#";
     var urlLicenseFairplayCastleblack = "https://castleblack.digiturk.com.tr/api/fairplay/license?version=#version#";
-    var urlLicenseWidevine = "https://castleblack.digiturk.com.tr/api/widevine/license?version=1.0";
+    var urlLicenseWidevine = "https://castleblack.digiturk.com.tr/api/widevine/license?version=#version#";
     var urlLicensePlayready = "";
     var urlLicenseFairplay = "";
     var certificateUrl = "https://castleblack.digiturk.com.tr/api/fairplay/certificate?version=#version#";
