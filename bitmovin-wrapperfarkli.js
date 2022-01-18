@@ -506,7 +506,7 @@ var BitmovinPlayer = function () {
                                 }, {
                                     name: "X-CB-Ticket",
                                     value: configModel.source.drm.ticket
-                                },licenseRequestRetryDelay:1e3,maxLicenseRequestRetries:5,videoRobustness:"SW_SECURE_CRYPTO",audioRobustness:"SW_SECURE_CRYPTO",prepareLicense:function(n){var f={license:n.license},t,r,u,i;try{if(t=JSON.parse(String.fromCharCode.apply(null,n.license)),t&&t.License&&t.Status==="OK")
+                                },licenseRequestRetryDelay:1e3,maxLicenseRequestRetries:5,videoRobustness:"SW_SECURE_CRYPTO",audioRobustness:"SW_SECURE_CRYPTO",prepareLicense:function(n){var f={license:n.license},t,r,u,i;try{if(t=JSON.parse(String.fromCharCode.apply(null,n.license)),t&&t.License&&t.Status==="OK"
 
                                 ];
                             }
