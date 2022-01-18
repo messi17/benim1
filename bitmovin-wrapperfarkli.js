@@ -4,7 +4,7 @@ var BitmovinPlayer = function () {
     var urlLicenseWidevineErstream = "";
     var urlLicensePlayreadyErstream = "https://digiturk-drm.ercdn.com/playready/rightsmanager.asmx?op=AcquireLicense";
     var urlLicenseFairplayErstream = "https://castleblack.digiturk.com.tr/api/fairplay/license?version=#version#";
-    var urlLicenseWidevineCastleblack = "https://castleblack.digiturk.com.tr/api/widevine/licenseraw?version=#version#";
+    var urlLicenseWidevineCastleblack = "https://castleblack.digiturk.com.tr/api/widevine/license?version=#version#";
     var urlLicensePlayreadyCastleblack = "https://castleblack.digiturk.com.tr/api/playready/license?version=#version#";
     var urlLicenseFairplayCastleblack = "https://castleblack.digiturk.com.tr/api/fairplay/license?version=#version#";
     var urlLicenseWidevine = "";
