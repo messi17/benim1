@@ -7,7 +7,7 @@ var BitmovinPlayer = function () {
     var urlLicenseWidevineCastleblack = "https://castleblack.digiturk.com.tr/api/widevine/license?version=#version#";
     var urlLicensePlayreadyCastleblack = "https://castleblack.digiturk.com.tr/api/playready/license?version=#version#";
     var urlLicenseFairplayCastleblack = "https://castleblack.digiturk.com.tr/api/fairplay/license?version=#version#";
-    var urlLicenseWidevine = "https://castleblack.digiturk.com.tr/api/widevine/license?version=#version#";
+    var urlLicenseWidevine = "";
     var urlLicensePlayready = "";
     var urlLicenseFairplay = "";
     var certificateUrl = "https://castleblack.digiturk.com.tr/api/fairplay/certificate?version=#version#";
