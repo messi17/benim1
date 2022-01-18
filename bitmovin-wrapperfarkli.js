@@ -509,6 +509,7 @@ var BitmovinPlayer = function () {
                                 }
                                 ];
                             }
+                            ,headers:{Authorization:"Bearer "+e.CastleBlackToken,"X-CB-Ticket":k},licenseRequestRetryDelay:1e3,maxLicenseRequestRetries:5,videoRobustness:"SW_SECURE_CRYPTO",audioRobustness:"SW_SECURE_CRYPTO",prepareLicense:function(n){var f={license:n.license},t,r,u,i;try{if(t=JSON.parse(String.fromCharCode.apply(null,n.license)),t&&t.License&&t.Status==="OK"){for(r=window.atob(t.License),u=new Uint8Array(new ArrayBuffer(r.length)),i=0;i<r.length;i++)u[i]=r.charCodeAt(i);f.license=u}}catch(e){}return f}}};
                             break;
                         case self.licenseType.ERSTREAM:
                             {
