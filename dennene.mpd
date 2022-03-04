@@ -1,0 +1,38 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:mspr="urn:microsoft:playready" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="dynamic" minimumUpdatePeriod="PT500S" suggestedPresentationDelay="PT2S" availabilityStartTime="2020-09-09T00:10:16Z" publishTime="2022-03-04T16:09:47Z" minBufferTime="PT4.0S" timeShiftBufferDepth="PT86400.0S">
+	<ProgramInformation>
+	</ProgramInformation>
+	<Period id="0" start="PT0.0S">
+		<AdaptationSet id="0" contentType="video" segmentAlignment="true" bitstreamSwitching="true">
+			<Representation id="0" mimeType="video/mp4" codecs="avc1.4d4015" bandwidth="800000" width="480" height="270" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="ExtAst1599610204_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" media="ExtAst1599610204_chunk_20200909T001000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="1" mimeType="video/mp4" codecs="avc1.4d401e" bandwidth="1400000" width="704" height="396" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="ExtAst1599610204_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" media="ExtAst1599610204_chunk_20200909T001000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			
+			
+			
+			<Representation id="5" mimeType="video/mp4" codecs="avc1.4d400d" bandwidth="400000" width="416" height="234" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="ExtAst1599610204_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" media="ExtAst1599610204_chunk_20200909T001000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="6" mimeType="video/mp4" codecs="avc1.4d400d" bandwidth="200000" width="416" height="234" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="ExtAst1599610204_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" media="ExtAst1599610204_chunk_20200909T001000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			
+		</AdaptationSet>
+		<AdaptationSet id="1" contentType="audio" segmentAlignment="true" bitstreamSwitching="true" lang="tur">
+			<Representation id="8" mimeType="audio/mp4" codecs="mp4a.40.5" bandwidth="128000" audioSamplingRate="48000">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+				<SegmentTemplate timescale="48000" duration="96000" initialization="ExtAst1599610204_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" media="ExtAst1599610204_chunk_20200909T001000_$RepresentationID$_$Number$.m4a?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5270,5272&amp;vqe=3&amp;pbf=2_3_2_782280414" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+	<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-iso:2014" value="https://time.akamai.com/?iso"/>
+</MPD>
