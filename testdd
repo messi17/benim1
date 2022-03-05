@@ -1,0 +1,75 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:mpeg:dash:schema:mpd:2011" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cenc="urn:mpeg:cenc:2013" xmlns:mspr="urn:microsoft:playready" xsi:schemaLocation="urn:mpeg:DASH:schema:MPD:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" profiles="urn:mpeg:dash:profile:isoff-live:2011" type="dynamic" minimumUpdatePeriod="PT500S" suggestedPresentationDelay="PT2S" availabilityStartTime="2020-09-08T22:20:16Z" publishTime="2022-03-05T10:26:39Z" minBufferTime="PT4.0S" timeShiftBufferDepth="PT86400.0S">
+	<ProgramInformation>
+	</ProgramInformation>
+	<Period id="0" start="PT0.0S">
+		<AdaptationSet id="0" contentType="video" segmentAlignment="true" bitstreamSwitching="true" maxFrameRate="50/1">
+			<ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc"/>
+			<ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+				<mspr:pro>PgMAAAEAAQA0AzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AYQBLAGQAbwArADIAYwBZAFcAWABPADcAWgBmADkARABzADAAVAA3AGkAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBTAEEAVwBBAGIAMQArAHUALwBvAHMAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAGwAYQB5AHIAZQBhAGQAeQAuAHQAdgBwAGwAdQBzAC4AYwBvAG0ALgB0AHIALwBQAGwAYQB5AFIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4ADwALwBMAEEAXwBVAFIATAA+ADwATABVAEkAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAGwAYQB5AHIAZQBhAGQAeQAuAHQAdgBwAGwAdQBzAC4AYwBvAG0ALgB0AHIALwBQAGwAYQB5AFIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4ADwALwBMAFUASQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+			</ContentProtection>
+			<ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+				<cenc:pssh>AAAAcHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAAFAIARIQ+2inaBhnc1m7Zf9Ds0T7iBojaHR0cHM6Ly93aWRldmluZS50dnBsdXMuY29tLnRyOjgwNjMiDnI9NTQ5NjAmcz0xMDcwKgVTRF9IRA==</cenc:pssh>
+			</ContentProtection>
+			<ContentProtection schemeIdUri="urn:uuid:9a27dd82-fde2-4725-8cbc-4234aa06ec09">
+				<cenc:pssh>AAAA+nBzc2gAAAAAmifdgv3iRyWMvEI0qgbsCQAAANo8VmVyaW1hdHJpeD48UHNzaCB2ZXJzaW9uPSIxIj48S2V5VXJsPjwhW0NEQVRBW2h0dHBzOi8vdm14dWFjc20udHZwbHVzLmNvbS50ci9DQUIva2V5ZmlsZT9zPTEwNzAmcj01NDk2MCZ0PURUViZwPTAma2M9M2FiZTljZDA1Mzg3MTFlYWIwMDM4MDMwZTAyNGE1NTgma2Q9ODUzYTYwNjlhMzFiZjdkZGQzMmFhZDYyMzVjOWY4ZGZdXT48L0tleVVybD48L1Bzc2g+PC9WZXJpbWF0cml4Pg==</cenc:pssh>
+			</ContentProtection>
+			<Representation id="0" mimeType="video/mp4" codecs="avc1.4d4015" bandwidth="800000" width="480" height="270" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="https://176.235.10.7/izmottrrs.tvplus.com.tr/PLTV/88888888/224/3221229509/ExtAst1599603604_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" media="ExtAst1599603604_chunk_20200908T222000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="1" mimeType="video/mp4" codecs="avc1.4d401e" bandwidth="1400000" width="704" height="396" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="https://176.235.10.7/izmottrrs.tvplus.com.tr/PLTV/88888888/224/3221229509/ExtAst1599603604_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" media="ExtAst1599603604_chunk_20200908T222000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			
+			
+			
+			<Representation id="5" mimeType="video/mp4" codecs="avc1.4d400d" bandwidth="400000" width="416" height="234" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="http://176.235.10.7/izmottrrs.tvplus.com.tr/PLTV/88888888/224/3221229509/ExtAst1599603604_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" media="ExtAst1599603604_chunk_20200908T222000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			<Representation id="6" mimeType="video/mp4" codecs="avc1.4d400d" bandwidth="200000" width="416" height="234" frameRate="25/1">
+				<SegmentTemplate timescale="12800" duration="25600" initialization="http://176.235.10.7/izmottrrs.tvplus.com.tr/PLTV/88888888/224/3221229509/ExtAst1599603604_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" media="ExtAst1599603604_chunk_20200908T222000_$RepresentationID$_$Number$.m4v?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+			
+		</AdaptationSet>
+		<AdaptationSet id="1" contentType="audio" segmentAlignment="true" bitstreamSwitching="true" lang="tur">
+			<ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc"/>
+			<ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+				<mspr:pro>PgMAAAEAAQA0AzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AYQBLAGQAbwArADIAYwBZAFcAWABPADcAWgBmADkARABzADAAVAA3AGkAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBTAEEAVwBBAGIAMQArAHUALwBvAHMAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAGwAYQB5AHIAZQBhAGQAeQAuAHQAdgBwAGwAdQBzAC4AYwBvAG0ALgB0AHIALwBQAGwAYQB5AFIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4ADwALwBMAEEAXwBVAFIATAA+ADwATABVAEkAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAGwAYQB5AHIAZQBhAGQAeQAuAHQAdgBwAGwAdQBzAC4AYwBvAG0ALgB0AHIALwBQAGwAYQB5AFIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4ADwALwBMAFUASQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+			</ContentProtection>
+			<ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+				<cenc:pssh>AAAAcHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAAFAIARIQ+2inaBhnc1m7Zf9Ds0T7iBojaHR0cHM6Ly93aWRldmluZS50dnBsdXMuY29tLnRyOjgwNjMiDnI9NTQ5NjAmcz0xMDcwKgVTRF9IRA==</cenc:pssh>
+			</ContentProtection>
+			<ContentProtection schemeIdUri="urn:uuid:9a27dd82-fde2-4725-8cbc-4234aa06ec09">
+				<cenc:pssh>AAAA+nBzc2gAAAAAmifdgv3iRyWMvEI0qgbsCQAAANo8VmVyaW1hdHJpeD48UHNzaCB2ZXJzaW9uPSIxIj48S2V5VXJsPjwhW0NEQVRBW2h0dHBzOi8vdm14dWFjc20udHZwbHVzLmNvbS50ci9DQUIva2V5ZmlsZT9zPTEwNzAmcj01NDk2MCZ0PURUViZwPTAma2M9M2FiZTljZDA1Mzg3MTFlYWIwMDM4MDMwZTAyNGE1NTgma2Q9ODUzYTYwNjlhMzFiZjdkZGQzMmFhZDYyMzVjOWY4ZGZdXT48L0tleVVybD48L1Bzc2g+PC9WZXJpbWF0cml4Pg==</cenc:pssh>
+			</ContentProtection>
+			<Representation id="8" mimeType="audio/mp4" codecs="mp4a.40.5" bandwidth="128000" audioSamplingRate="48000">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+				<SegmentTemplate timescale="48000" duration="96000" initialization="https://176.235.10.7/izmottrrs.tvplus.com.tr/PLTV/88888888/224/3221229509/ExtAst1599603604_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" media="ExtAst1599603604_chunk_20200908T222000_$RepresentationID$_$Number$.m4a?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+		<AdaptationSet id="2" contentType="audio" segmentAlignment="true" bitstreamSwitching="true" lang="eng">
+			<ContentProtection schemeIdUri="urn:mpeg:dash:mp4protection:2011" value="cenc"/>
+			<ContentProtection schemeIdUri="urn:uuid:9a04f079-9840-4286-ab92-e65be0885f95">
+				<mspr:pro>PgMAAAEAAQA0AzwAVwBSAE0ASABFAEEARABFAFIAIAB4AG0AbABuAHMAPQAiAGgAdAB0AHAAOgAvAC8AcwBjAGgAZQBtAGEAcwAuAG0AaQBjAHIAbwBzAG8AZgB0AC4AYwBvAG0ALwBEAFIATQAvADIAMAAwADcALwAwADMALwBQAGwAYQB5AFIAZQBhAGQAeQBIAGUAYQBkAGUAcgAiACAAdgBlAHIAcwBpAG8AbgA9ACIANAAuADAALgAwAC4AMAAiAD4APABEAEEAVABBAD4APABQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsARQBZAEwARQBOAD4AMQA2ADwALwBLAEUAWQBMAEUATgA+ADwAQQBMAEcASQBEAD4AQQBFAFMAQwBUAFIAPAAvAEEATABHAEkARAA+ADwALwBQAFIATwBUAEUAQwBUAEkATgBGAE8APgA8AEsASQBEAD4AYQBLAGQAbwArADIAYwBZAFcAWABPADcAWgBmADkARABzADAAVAA3AGkAQQA9AD0APAAvAEsASQBEAD4APABDAEgARQBDAEsAUwBVAE0APgBTAEEAVwBBAGIAMQArAHUALwBvAHMAPQA8AC8AQwBIAEUAQwBLAFMAVQBNAD4APABMAEEAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAGwAYQB5AHIAZQBhAGQAeQAuAHQAdgBwAGwAdQBzAC4AYwBvAG0ALgB0AHIALwBQAGwAYQB5AFIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4ADwALwBMAEEAXwBVAFIATAA+ADwATABVAEkAXwBVAFIATAA+AGgAdAB0AHAAcwA6AC8ALwBwAGwAYQB5AHIAZQBhAGQAeQAuAHQAdgBwAGwAdQBzAC4AYwBvAG0ALgB0AHIALwBQAGwAYQB5AFIAZQBhAGQAeQAvAHIAaQBnAGgAdABzAG0AYQBuAGEAZwBlAHIALgBhAHMAbQB4ADwALwBMAFUASQBfAFUAUgBMAD4APAAvAEQAQQBUAEEAPgA8AC8AVwBSAE0ASABFAEEARABFAFIAPgA=</mspr:pro>
+			</ContentProtection>
+			<ContentProtection schemeIdUri="urn:uuid:edef8ba9-79d6-4ace-a3c8-27dcd51d21ed">
+				<cenc:pssh>AAAAcHBzc2gAAAAA7e+LqXnWSs6jyCfc1R0h7QAAAFAIARIQ+2inaBhnc1m7Zf9Ds0T7iBojaHR0cHM6Ly93aWRldmluZS50dnBsdXMuY29tLnRyOjgwNjMiDnI9NTQ5NjAmcz0xMDcwKgVTRF9IRA==</cenc:pssh>
+			</ContentProtection>
+			<ContentProtection schemeIdUri="urn:uuid:9a27dd82-fde2-4725-8cbc-4234aa06ec09">
+				<cenc:pssh>AAAA+nBzc2gAAAAAmifdgv3iRyWMvEI0qgbsCQAAANo8VmVyaW1hdHJpeD48UHNzaCB2ZXJzaW9uPSIxIj48S2V5VXJsPjwhW0NEQVRBW2h0dHBzOi8vdm14dWFjc20udHZwbHVzLmNvbS50ci9DQUIva2V5ZmlsZT9zPTEwNzAmcj01NDk2MCZ0PURUViZwPTAma2M9M2FiZTljZDA1Mzg3MTFlYWIwMDM4MDMwZTAyNGE1NTgma2Q9ODUzYTYwNjlhMzFiZjdkZGQzMmFhZDYyMzVjOWY4ZGZdXT48L0tleVVybD48L1Bzc2g+PC9WZXJpbWF0cml4Pg==</cenc:pssh>
+			</ContentProtection>
+			<Representation id="9" mimeType="audio/mp4" codecs="mp4a.40.5" bandwidth="128000" audioSamplingRate="48000">
+				<AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2"/>
+				<SegmentTemplate timescale="48000" duration="96000" initialization="https://176.235.10.7/izmottrrs.tvplus.com.tr/PLTV/88888888/224/3221229509/ExtAst1599603604_init_$RepresentationID$.m4i?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" media="ExtAst1599603604_chunk_20200908T222000_$RepresentationID$_$Number$.m4a?hw_dash=1&amp;servicetype=1&amp;rrsip=izmottrrs.tvplus.com.tr:443&amp;zoneoffset=0&amp;devkbps=190-1750&amp;limitflux=-1&amp;limitdur=-1&amp;tenantId=9001&amp;validdev=5273,5275&amp;vqe=3&amp;pbf=2_3_2_3828694328" startNumber="1">
+				</SegmentTemplate>
+			</Representation>
+		</AdaptationSet>
+	</Period>
+	<UTCTiming schemeIdUri="urn:mpeg:dash:utc:http-iso:2014" value="https://time.akamai.com/?iso"/>
+</MPD>
