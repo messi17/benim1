@@ -1576,7 +1576,7 @@ var OfferManager = function (options) {
         console.log('params', params);
 
         Utilities.makeFetch().fetch({
-            endpoint: 'https://www.beinconnect.com.tr/content/playrequestlivesports/content/playrequestlivesports',
+            endpoint: 'https://www.beinconnect.com.tr/content/playrequestlivesports',
             requestParams: {
                 method: 'POST',
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
