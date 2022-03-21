@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="player.min.css">
+    <script>
+        var UI_AppTitle = "NGCloudVideo";
+        var UI_AppTitle_Lower = UI_AppTitle.toLowerCase();
+        var UI_AppTitle_Short = "NGCloud";
+        var UI_AppGuestSite = "www.ngcloudvideo.com";
+        var apiCdnUrl = "https://apc.ttcloudvideo.com/collect";
+        var version ="TTCloud";
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r76/three.js"></script>
+    <script src="settings.js"></script>
+    <script src="playernew.min.js"></script>
+</head>
+<body>
+    <video style="padding-top:0px !important" id="player" class="video-js vjs-16-9" crossorigin="anonymous" controls>
+        <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a web browser
+            that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+        </p>
+    </video>
+</body>
+</html>
