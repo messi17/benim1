@@ -1245,7 +1245,8 @@ var OfferManager = function (options) {
             params = {
                 cmsContentId: dataElem.dataset.cmsContentId,
                 usageSpecId: dataElem.dataset.usageSpecId,
-                channelId: dataElem.dataset.channelId, 
+                channelId: dataElem.dataset.channelId,
+                playRequestType: dataElem.dataset.playRequestType,
                 eventStartTime: dataElem.dataset.eventStartTime,
                 eventEndTime: dataElem.dataset.eventEndTime,
                 blackoutServiceAccountId: dataElem.dataset.blackoutServiceAccountId,
