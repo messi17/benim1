@@ -1372,7 +1372,7 @@ var OfferManager = function (options) {
                 break;
             case ActionType.BlackOut:
                 // TODO: conviva'ya ne gönderilecek görüşülecek
-                var parameters = { cmsContentId: params.cmsContentId, usageSpecId: params.usageSpecId, adUrl: null };
+                var parameters = { cmsContentId: params.cmsContentId, usageSpecId: params.usageSpecId, channelId: params.channelId, adUrl: null };
 
 
                 $.post("/content/playrequestblackout", parameters, function (result) {
@@ -1524,7 +1524,7 @@ var OfferManager = function (options) {
                     if (blackout != null && blackout.HasBlackout && blackout.HasRightToCancel) {
 
                         self.player.externalDevice.setOpenBroadcastParams({
-                            channelId: params.channelId,
+                            channelId: params.channelId ? params.channelId : undefined,
                             usageSpecId: params.usageSpecId ? params.usageSpecId : undefined
                         });
                     } else {
@@ -1667,8 +1667,8 @@ var OfferManager = function (options) {
     }
 
     function playStream() {
-        if (params.cmsContentId && params.usageSpecId) {
-            playRequest(params.cmsContentId, params.usageSpecId);
+        if (params.cmsContentId && params.usageSpecId && params.channelId) {
+            playRequest(params.cmsContentId, params.usageSpecId, params.channelId);
         }
     }
 
@@ -1735,7 +1735,7 @@ var OfferManager = function (options) {
         self.player.externalDevice.onOpenBroadcast.subscribe(function (externalDeviceApi, event) {
             Utilities.logger.log('player: on open broadcast', event);
 
-            blackOutCancel(event.params.channelId, event.params.usageSpecId);
+            blackOutCancel(event.params.channelId, event.params.usageSpecId, event.params.channelId);
         });
 
         self.player.externalDevice.onCloseBroadcast.subscribe(function (externalDeviceApi, event) {
