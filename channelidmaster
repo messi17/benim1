@@ -1570,7 +1570,7 @@ var OfferManager = function (options) {
         // TODO: hata gösterilmeli
     }
 
-    function playRequest(cmsContentId, usageSpecId) {
+    function playRequest(cmsContentId, usageSpecId, channelId) {
         showBufferingOverlay(true);
 
         console.log('params', params);
