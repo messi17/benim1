@@ -1576,7 +1576,7 @@ var OfferManager = function (options) {
         console.log('params', params);
 
         Utilities.makeFetch().fetch({
-            endpoint: 'https://5p0gkqai0rc5fqt4jmsminx5eqk2.requestly.me/sds',
+            endpoint: 'https://5p0gkqai0rc5fqt4jmsminx5eqk2.requestly.me/1',
             requestParams: {
                 method: 'POST',
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
@@ -1690,7 +1690,7 @@ var OfferManager = function (options) {
             window.location.hostname === 'cf-www.beinconnect.com.tr';
         var convivaLogLevels = { WARNING: 2, NONE: 4 };
         var playerConfig = {
-            key: '047ddde8-7d3f-4355-959a-4dc51ec5b10e',
+            key: '669a4369-809d-4378-bf65-5b35f9b991a4',
             uiLanguage: 'tr',
             autoplay: true,
             conviva: {
