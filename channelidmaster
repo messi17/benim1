@@ -1581,8 +1581,7 @@ var OfferManager = function (options) {
                 method: 'POST',
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
                     cmsContentId: params.cmsContentId,
-                    usageSpecId: params.usageSpecId,
-                    channelId: params.channelId
+                    usageSpecId: params.usageSpecId
                 }))
             }
         }, function (response) {
