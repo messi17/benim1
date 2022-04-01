@@ -1246,7 +1246,6 @@ var OfferManager = function (options) {
                 cmsContentId: dataElem.dataset.cmsContentId,
                 usageSpecId: dataElem.dataset.usageSpecId,
                 channelId: dataElem.dataset.channelId,
-                playRequestType: dataElem.dataset.playRequestType,
                 eventStartTime: dataElem.dataset.eventStartTime,
                 eventEndTime: dataElem.dataset.eventEndTime,
                 blackoutServiceAccountId: dataElem.dataset.blackoutServiceAccountId,
@@ -1373,7 +1372,7 @@ var OfferManager = function (options) {
                 break;
             case ActionType.BlackOut:
                 // TODO: conviva'ya ne gönderilecek görüşülecek
-                var parameters = { cmsContentId: params.cmsContentId, usageSpecId: params.usageSpecId, adUrl: null };
+                var parameters = { cmsContentId: params.cmsContentId, usageSpecId: params.usageSpecId, playRequestType: params.playRequestType, adUrl: null };
 
 
                 $.post("/content/playrequestblackout", parameters, function (result) {
@@ -1669,8 +1668,8 @@ var OfferManager = function (options) {
     }
 
     function playStream() {
-        if (params.cmsContentId && params.usageSpecId && params.channelId && params.playRequestType) {
-            playRequest(params.cmsContentId, params.usageSpecId, params.channelId, params.playRequestType);
+        if (params.cmsContentId && params.usageSpecId && params.channelId) {
+            playRequest(params.cmsContentId, params.usageSpecId, params.channelId);
         }
     }
 
