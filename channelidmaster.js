@@ -1576,7 +1576,7 @@ var OfferManager = function (options) {
         console.log('params', params);
 
         Utilities.makeFetch().fetch({
-            endpoint: '/content/playrequestlivesports',
+            endpoint: '/tv/playrequest',
             requestParams: {
                 method: 'POST',
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
