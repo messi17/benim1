@@ -1620,7 +1620,7 @@ var OfferManager = function (options) {
        
     }
 
-    function blackOutCancel(channelId, usageSpecId, channelId) {
+    function blackOutCancel(channelId, usageSpecId) {
         if (!blackOutManager) return;
 
         blackOutManager.blackOutCancel(channelId, usageSpecId,
@@ -1667,7 +1667,7 @@ var OfferManager = function (options) {
     }
 
     function playStream() {
-        if (params.cmsContentId && params.usageSpecId) {
+        if (params.cmsContentId && params.usageSpecId && params.channelId) {
             playRequest(params.cmsContentId, params.usageSpecId, params.channelId);
         }
     }
