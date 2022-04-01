@@ -1583,7 +1583,7 @@ var OfferManager = function (options) {
                     cmsContentId: params.cmsContentId,
                     usageSpecId: params.usageSpecId,
                     channelId: params.channelId,
-                    playRequestType: '2' 
+                    playRequestType: params.playRequestType
                 }))
             }
         }, function (response) {
