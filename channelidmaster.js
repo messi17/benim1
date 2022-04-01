@@ -1582,7 +1582,8 @@ var OfferManager = function (options) {
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
                     cmsContentId: params.cmsContentId,
                     usageSpecId: params.usageSpecId,
-                    channelId: params.channelId
+                    channelId: params.channelId,
+                    playRequestType: '2' 
                 }))
             }
         }, function (response) {
