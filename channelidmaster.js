@@ -1669,7 +1669,7 @@ var OfferManager = function (options) {
 
     function playStream() {
         if (params.cmsContentId && params.usageSpecId && params.channelId && params.playRequestType ) {
-            playRequest(params.cmsContentId, params.usageSpecId, params.channelId, params.channelId);
+            playRequest(params.cmsContentId, params.usageSpecId, params.channelId, params.playRequestType);
         }
     }
 
