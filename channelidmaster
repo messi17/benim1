@@ -1570,7 +1570,7 @@ var OfferManager = function (options) {
         // TODO: hata gösterilmeli
     }
 
-    function playRequest(cmsContentId, usageSpecId, channelId) {
+    function playRequest(cmsContentId, usageSpecId) {
         showBufferingOverlay(true);
 
         console.log('params', params);
@@ -1582,7 +1582,7 @@ var OfferManager = function (options) {
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
                     cmsContentId: params.cmsContentId,
                     usageSpecId: params.usageSpecId,
-                    channelId:   params.channelId
+                    channelId: params.channelId
                 }))
             }
         }, function (response) {
@@ -1667,8 +1667,8 @@ var OfferManager = function (options) {
     }
 
     function playStream() {
-        if (params.cmsContentId && params.usageSpecId && params.channelId) {
-            playRequest(params.cmsContentId, params.usageSpecId, params.channelId);
+        if (params.cmsContentId && params.usageSpecId) {
+            playRequest(params.cmsContentId, params.usageSpecId);
         }
     }
 
