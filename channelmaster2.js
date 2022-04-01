@@ -1690,7 +1690,7 @@ var OfferManager = function (options) {
             window.location.hostname === 'cf-www.beinconnect.com.tr';
         var convivaLogLevels = { WARNING: 2, NONE: 4 };
         var playerConfig = {
-            key: '669a4369-809d-4378-bf65-5b35f9b991a4',
+            key: '047ddde8-7d3f-4355-959a-4dc51ec5b10e',
             uiLanguage: 'tr',
             autoplay: true,
             conviva: {
