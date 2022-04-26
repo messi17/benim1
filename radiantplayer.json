@@ -2,7 +2,7 @@
   "playlist": [
     {
       "src": {
-        "hls": "https://5b44cf20b0388.streamlock.net:8443/vod/smil:bbb.smil/playlist.m3u8"
+        "hls": "https://dt-live-bc-beinsports01.akamaized.net/ppv/beinsports01/beinsports01.isml/web.m3u8?hdnts=ip=85.96.223.16~st=1521723092~exp=1651075120~acl=/*~id=ac9480444%7C1650999520278~hmac=4e2b4a107d6d520437c06b3594252fb1f1080b39d7c13a3299dc8e5047ffafd5"
       },
       "contentMetadata": {
         "title": "Playlist Item 1",
