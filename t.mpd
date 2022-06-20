@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<MPD xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" minimumUpdatePeriod="PT3.000S" profiles="urn:mpeg:dash:profile:isoff-live:2011,http://dashif.org/guidelines/dash-if-simple" minBufferTime="PT6.000S" availabilityStartTime="2017-02-22T16:00:00Z" publishTime="2022-06-20T10:43:39Z" xmlns="urn:mpeg:dash:schema:mpd:2011" xsi:schemaLocation="urn:mpeg:dash:schema:mpd:2011 http://standards.iso.org/ittf/PubliclyAvailableStandards/MPEG-DASH_schema_files/DASH-MPD.xsd" type="dynamic" timeShiftBufferDepth="PT60.000S">
+  <Period start="PT0S" id="0">
+    <AdaptationSet maxHeight="1080" segmentAlignment="true" maxFrameRate="25" maxWidth="1920" id="1">
+      <SegmentTemplate timescale="1000" initialization="https://195.175.224.147:6610/init-$RepresentationID$.mp4?JITPDRMType=LBq9ysyzb72NkSM4WXdutg%3D%3D&amp;startNumber=27990427&amp;virtualDomain=001.live_hls.zte.com&amp;recommendtype=0&amp;IASHttpSessionId=RR1613320220620104032973622&amp;m4s_min=1&amp;filedura=6&amp;stbid=Chrome102&amp;ztecid=ch00000090990000001267&amp;profilecode=&amp;NeedJITP=1&amp;ispcode=75&amp;terminalflag=4&amp;JITPMediaType=DASH&amp;userid=guestpc&amp;contentid=ch00000000000000001358&amp;isjitp=0" media="https://195.175.224.147:6610/fragment-$Time$-$RepresentationID$.m4s?JITPDRMType=LBq9ysyzb72NkSM4WXdutg%3D%3D&amp;startNumber=27990427&amp;virtualDomain=001.live_hls.zte.com&amp;recommendtype=0&amp;IASHttpSessionId=RR1613320220620104032973622&amp;m4s_min=1&amp;filedura=6&amp;stbid=Chrome102&amp;ztecid=ch00000090990000001267&amp;profilecode=&amp;NeedJITP=1&amp;ispcode=75&amp;terminalflag=4&amp;JITPMediaType=DASH&amp;userid=guestpc&amp;contentid=ch00000000000000001358&amp;isjitp=0" startNumber="27990427">
+        <SegmentTimeline>
+          <S t="167942559770" d="6000" r="9" />
+        </SegmentTimeline>
+      </SegmentTemplate>
+      <Representation frameRate="25" sar="1:1" id="f1-v1-x3" startWithSAP="1" bandwidth="512000" codecs="avc1.4d401e" mimeType="video/mp4" height="360" width="640" />
+      <Representation frameRate="25" sar="1:1" id="f2-v1-x3" startWithSAP="1" bandwidth="1024000" codecs="avc1.4d401e" mimeType="video/mp4" height="480" width="854" />
+      <Representation frameRate="25" sar="1:1" id="f3-v1-x3" startWithSAP="1" bandwidth="1536000" codecs="avc1.4d401f" mimeType="video/mp4" height="576" width="1024" />
+      <Representation frameRate="25" sar="1:1" id="f4-v1-x3" startWithSAP="1" bandwidth="2560000" codecs="avc1.64001f" mimeType="video/mp4" height="720" width="1280" />
+      <Representation frameRate="25" sar="1:1" id="f5-v1-x3" startWithSAP="1" bandwidth="5120000" codecs="avc1.640028" mimeType="video/mp4" height="1080" width="1920" />
+    </AdaptationSet>
+    <AdaptationSet segmentAlignment="true" lang="tr" label="Türkçe" id="2">
+      <AudioChannelConfiguration schemeIdUri="urn:mpeg:dash:23003:3:audio_channel_configuration:2011" value="2" />
+      <SegmentTemplate timescale="1000" initialization="https://195.175.224.147:6610/init-$RepresentationID$.mp4?JITPDRMType=LBq9ysyzb72NkSM4WXdutg%3D%3D&amp;startNumber=27990427&amp;virtualDomain=001.live_hls.zte.com&amp;recommendtype=0&amp;IASHttpSessionId=RR1613320220620104032973622&amp;m4s_min=1&amp;filedura=6&amp;stbid=Chrome102&amp;ztecid=ch00000090990000001267&amp;profilecode=&amp;NeedJITP=1&amp;ispcode=75&amp;terminalflag=4&amp;JITPMediaType=DASH&amp;userid=guestpc&amp;contentid=ch00000000000000001358&amp;isjitp=0" media="https://195.175.224.147:6610/fragment-$Time$-$RepresentationID$.m4s?JITPDRMType=LBq9ysyzb72NkSM4WXdutg%3D%3D&amp;startNumber=27990427&amp;virtualDomain=001.live_hls.zte.com&amp;recommendtype=0&amp;IASHttpSessionId=RR1613320220620104032973622&amp;m4s_min=1&amp;filedura=6&amp;stbid=Chrome102&amp;ztecid=ch00000090990000001267&amp;profilecode=&amp;NeedJITP=1&amp;ispcode=75&amp;terminalflag=4&amp;JITPMediaType=DASH&amp;userid=guestpc&amp;contentid=ch00000000000000001358&amp;isjitp=0" startNumber="27990427">
+        <SegmentTimeline>
+          <S t="167942559770" d="6000" r="9" />
+        </SegmentTimeline>
+      </SegmentTemplate>
+      <Representation id="f1-a1-x3" codecs="mp4a.40.2" startWithSAP="1" mimeType="audio/mp4" bandwidth="125588" audioSamplingRate="48000" />
+    </AdaptationSet>
+  </Period>
+</MPD>
