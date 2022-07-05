@@ -14,10 +14,10 @@
         "embed.js"
     ],
     "icons": {
-        "16": "images/logo16.png",
-        "32": "images/logo32.png",
-        "48": "images/logo48.png",
-        "128": "images/logo128.png"
+        "16": "//rawcdn.githack.com/messi17/benim1/b3f3d23e1466ef5840a80d618eb31d2040121db7/JWPlayer---Theatre-mode/images/logo16.png",
+        "32": "//rawcdn.githack.com/messi17/benim1/b3f3d23e1466ef5840a80d618eb31d2040121db7/JWPlayer---Theatre-mode/images/logo32.png",
+        "48": "//rawcdn.githack.com/messi17/benim1/b3f3d23e1466ef5840a80d618eb31d2040121db7/JWPlayer---Theatre-mode/images/logo48.png",
+        "128": "//rawcdn.githack.com/messi17/benim1/b3f3d23e1466ef5840a80d618eb31d2040121db7/JWPlayer---Theatre-mode/images/logo128.png"
     },
     "manifest_version": 2
 }
