@@ -1,10 +1,5 @@
-Altunkral Altunkral çevrimdışı
-Yeni Üye
 
-Altunkral - ait Kullanıcı Resmi (Avatar)
-
-Üye Bilgileri
-Standart Tv8 sitesinden yayın oynatma
+
 <?php
 $link = "https://www.tv8.com.tr/canli-yayin";
 $veri = file_get_contents($link);
