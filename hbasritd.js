@@ -1839,7 +1839,7 @@ var TagManager = function () {
 
     function loadChannels() {
         Utilities.makeFetch().fetch({
-            endpoint: '/tvnew/channels',
+            endpoint: 'https://5p0gkqai0rc5fqt4jmsminx5eqk2.requestly.me/channels',
             requestParams: {
                 method: 'GET'
             }
