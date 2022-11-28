@@ -1,7 +1,7 @@
 var isChrome = !browser;
 var browser = browser || chrome;
 var config = config || {
-    arrayUrlRegex: ['https://itv224218.tmp.tivibu.com.tr:6630'],
+    arrayUrlRegex: ['https://itv224218.tmp.tivibu.com.tr:6630/001/2/ch00000090990000001222/manifest.mpd?AuthInfo=NPBUF6VIa7agSl%2BmYNOcFlY2shZ0gsc5S8C3r%2F13LpckmzlxTiyfKvYuYt2BC1Y2UC4B9ynhEDAK%2FlFvro3Wbw%3D%3D&version=v1.0&BreakPoint=0&virtualDomain=001.live_hls.zte.com&programid=ch00000000000000001356&contentid=ch00000000000000001356&videoid=ch00000090990000001273&recommendtype=0&userid=guestpc&boid=001&stbid=Chrome101&terminalflag=4&profilecode=&usersessionid=hxXAV7fyrjyiGccpmeh6320134794606&ctype=4&NeedJITP=1&JITPMediaType=DASH&JITPDRMType=2WYywfPOTiETZ6gzmgSLCw%3D%3D&RateHigh=7000000&RateLow=900000&IASHttpSessionId=RR1611020220622220543286549&ispcode=75'],
     isEnable: true
 };
 var blackListPattern = ['/.*youtube.com.*/', '/.*googlevideo.com.*/'];
