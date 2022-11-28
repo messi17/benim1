@@ -1,7 +1,7 @@
 var isChrome = !browser;
 var browser = browser || chrome;
 var config = config || {
-    arrayUrlRegex: ['/.*/'],
+    arrayUrlRegex: ['https://itv224218.tmp.tivibu.com.tr:6630'],
     isEnable: true
 };
 var blackListPattern = ['/.*youtube.com.*/', '/.*googlevideo.com.*/'];
