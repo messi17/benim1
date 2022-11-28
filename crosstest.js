@@ -98,11 +98,6 @@ function onHeadersReceived(e) {
                 name: "access-control-expose-headers",
                 value: "*"
             }
-                                  ,
-            {
-                name: "origin",
-                value: "https://itv224218.tmp.tivibu.com.tr:6630"
-            }
         ];
         addOrReplaceHeader(e.responseHeaders, crossDomainHeaders);
     }
@@ -136,4 +131,3 @@ browser.webRequest.onHeadersReceived.addListener(
 );
 
 initialize();
-Source code and support at 
