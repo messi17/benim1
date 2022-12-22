@@ -11,7 +11,7 @@ var MultiPlayManager = function (options) {
     var defaultOptions = {
         endpoint: '',
         data: {},
-        checkIntervalInSeconds: 
+        checkIntervalInSeconds: 60 * 4 
     };
 
     var timer = null;
