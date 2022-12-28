@@ -1,9 +1,3 @@
-/* Minification failed. Returning unminified contents.
-(1442,49-50): run-time error JS1005: Expected '(': {
-(1444,41-47): run-time error JS1006: Expected ')': return
-(1444,41-47): run-time error JS1008: Expected '{': return
-(1447,30-31): run-time error JS1009: Expected '}': ;
- */
 /**
  * Check multi play request'leri gönderir
  * checkIntervalInSeconds 0 verilirse auto check yapılmaz
@@ -697,7 +691,12 @@ var OfferManager = function (options) {
     //        response.json().then(processOfferSuccessHandler).catch(processOfferErrorHandler);
     //    }, processOfferErrorHandler);
     //}
-};;var TagManager = function () {
+};;// legacy
+var GaVideoEventNameConstants = {
+    Play: "videoPlay", Pause: "videoPause", Resume: "videoResume", Seek: "videoSeek", Finished: "videoCompleted", FullScreen: "videoGoFullScreen", ExitFullScreen: "videoExitFullScreen", ChangeSubs: "videoChangeSubs", ChangeResolution: "videoChangeRes", ChangeAudio: "videoChangeAudio", PlayEpisode: "playEpisode", AutoPlayNextEpisode: "autoPlayNextEpisode"
+};
+
+var TagManager = function () {
     window.dataLayer = window.dataLayer || [];
     window.netmera = window.netmera || [];
 
@@ -709,7 +708,6 @@ var OfferManager = function (options) {
     var _firstPlayFlag = true;
     var _isPPV = false;
     var _PPVInfos = {};
-
     var PlayerTypes = {
         LIVE: 'PLAYER_LIVE',
         VOD: 'PLAYER_VOD',
@@ -732,12 +730,18 @@ var OfferManager = function (options) {
 
     var LegacyPlayerEvents = {
         PLAY: 'videoPlay',
+        PLAY_EPISODE: "playEpisode",
         PAUSED: 'videoPause',
         RESUME: 'videoResume',
         //FINISHED: 'videoCompleted',
+        //SEEK: 'videoSeek',
         FULLSCREEN_ENTER: 'videoGoFullScreen',
         FULLSCREEN_EXIT: 'videoExitFullScreen',
-        VIDEO_QUALITY_CHANGED: 'videoChangeRes'
+        VIDEO_QUALITY_CHANGED: 'videoChangeRes',
+        VIDEO_SUBTITLE_CHANGED: 'videoChangeSubs',
+        //VIDEO_SUBTITLE_CLOSED: 'videoCloseSubs',
+        VIDEO_AUDIO_CHANGED: 'videoChangeAudio',
+        VIDEO_COMPLETED: 'videoCompleted'
     };
 
 
@@ -787,19 +791,90 @@ var OfferManager = function (options) {
 
     var addLegacyPlayerEventToDataLayer = function (eventName, eventArgs) {
         var currentTime = 0;
-
+        var currentProgressRate = '0.00';
+        var contentDuration = 0;
         if (_player.isLive()) {
             currentTime = _player.timeShift();
+        }
+        else {
+            currentTime = _player.currentTime();
+            contentDuration = _player.getDuration();
+            if (contentDuration !== null && contentDuration > 0)
+                currentProgressRate = ((currentTime / parseFloat(contentDuration) * 100).toFixed(2)).toString();
         }
 
         switch (eventName) {
             case LegacyPlayerEvents.PLAY:
             case LegacyPlayerEvents.PAUSED:
             case LegacyPlayerEvents.RESUME:
+            //case LegacyPlayerEvents.SEEK:
+            case LegacyPlayerEvents.VIDEO_COMPLETED:
                 dataLayer.push({
                     event: eventName,
                     currentProgress: Utilities.secondsToTime(currentTime),
-                    currentProgressRate: '0.00'
+                    currentProgressRate: currentProgressRate
+                });
+
+                break;
+            case LegacyPlayerEvents.PLAY_EPISODE:
+                var activeSeason = _player.series.getActiveSeason();
+                var episode = '';
+                if (activeSeason !== null && eventArgs !== null && activeSeason.item !== null && eventArgs.item !== null) {
+                    episode = "S" + activeSeason.item.no + "E" + eventArgs.item.no;
+                }
+
+                var availableAudios = _player.getAvailableAudio();
+                var audiotOptions = '';
+                var originalAudio = [];
+                var originalAudioLang = '';
+                var audioStream = '';
+                if (availableAudios && availableAudios.length > 0) {
+                    if (availableAudios.length === 2) {
+                        audiotOptions = (availableAudios[0].lang && availableAudios[1].lang) ? availableAudios[0].lang.toUpperCase() + '|' + availableAudios[1].lang.toUpperCase() : '';
+                    }
+                    else if (availableAudios.length === 1) {
+                        audiotOptions = availableAudios[0].lang ? availableAudios[0].lang.toUpperCase() : '';
+                    }
+                    originalAudio = availableAudios.filter(x => x.label !== null && (x.label.includes("Orijinal") || x.label.includes("orijinal")));
+                    if (originalAudio) {
+                        originalAudioLang = originalAudio[0].lang ? originalAudio[0].lang.toUpperCase() : '';
+                    }
+                }
+
+                var contentAudio = _player.getAudio();
+                if (contentAudio) {
+                    audioStream = contentAudio.lang ? contentAudio.lang.toUpperCase() : '';
+                }
+
+                var videoSubtitle = _player.getSubtitle();
+                var subtitleLang = '';
+                var isSubtitleOn = false;
+
+                if (videoSubtitle) {
+                    isSubtitleOn = true;
+                    subtitleLang = videoSubtitle.lang;
+                }
+
+                dataLayer.push({
+                    event: eventName,
+                    contentEpisode: episode,
+                    contentLenght: contentDuration ? Utilities.secondsToTime(contentDuration) : 0,
+                    audioStreamOptions: audiotOptions,
+                    audioStream: audioStream,
+                    originalAudioLang: originalAudioLang,
+                    isSubtitleOn: isSubtitleOn ? 'Yes' : 'No',
+                    subtitleLang: subtitleLang
+                });
+
+                break;
+            case LegacyPlayerEvents.VIDEO_SUBTITLE_CHANGED:
+            //case LegacyPlayerEvents.VIDEO_SUBTITLE_CLOSED:
+                dataLayer.push({
+                    event: eventName,
+                    currentProgress: Utilities.secondsToTime(currentTime),
+                    currentProgressRate: currentProgressRate,
+                    isSubtitleOn: 'Yes',
+                    subtitleLang: eventArgs.sourceSubtitle.lang ? eventArgs.sourceSubtitle.lang.toUpperCase() : ""
                 });
 
                 break;
@@ -807,16 +882,30 @@ var OfferManager = function (options) {
                 dataLayer.push({
                     event: eventName,
                     currentProgress: Utilities.secondsToTime(currentTime),
-                    currentProgressRate: '0.00',
+                    currentProgressRate: currentProgressRate,
                     isFullScreen: 'Yes'
                 });
 
                 break;
+            case LegacyPlayerEvents.VIDEO_AUDIO_CHANGED:
+                var audioLang = "";
+                if (eventArgs !== null && eventArgs.targetAudio !== null) {
+                    audioLang = eventArgs.targetAudio.lang ? eventArgs.targetAudio.lang.toUpperCase() : "";
+                }
+                dataLayer.push({
+                    event: eventName,
+                    currentProgress: Utilities.secondsToTime(currentTime),
+                    currentProgressRate: currentProgressRate,
+                    audioStream: audioLang
+                });
+
+                break;
+
             case LegacyPlayerEvents.FULLSCREEN_EXIT:
                 dataLayer.push({
                     event: eventName,
                     currentProgress: Utilities.secondsToTime(currentTime),
-                    currentProgressRate: '0.00',
+                    currentProgressRate: currentProgressRate,
                     isFullScreen: 'No'
                 });
 
@@ -827,8 +916,9 @@ var OfferManager = function (options) {
                 dataLayer.push({
                     event: eventName,
                     currentProgress: Utilities.secondsToTime(currentTime),
-                    currentProgressRate: '0.00',
-                    videoResolution: targetVideoQuality.width + 'x' + targetVideoQuality.height + ', ' + targetVideoQuality.bitrate + 'bps'
+                    currentProgressRate: currentProgressRate,
+                    videoResolution: targetVideoQuality.width + 'x' + targetVideoQuality.height ,
+                    videoBitrate: targetVideoQuality.bitrate + 'bps'
                 });
 
                 break;
@@ -872,30 +962,41 @@ var OfferManager = function (options) {
 
     var addNetmeraPlayEvent = function () {
         var playEvent = {};
-        if (_isPPV === false) {
+        if (_isPPV === false && _player.isLive()) {
             var currentProgram = _player.tvGuide.getCurrentItem();
             var currentChannel = _player.channels.getCurrentItem();
-            var programId = '';
-            var programTitle = 'untitled';
-
+            var channelName = '';
+            var channelId = '';
+            var programId = seriesName = programTitle = category = '';
             if (currentProgram) {
+                seriesName = currentProgram.item.seriesName;
                 programId = currentProgram.item.id;
-                programTitle = currentProgram.item.title.toLowerCase();
+                programTitle = currentProgram.item.title ? currentProgram.item.title.toLowerCase() : '';
+            }
+            if (currentChannel) {
+                category = currentChannel.item.categoryName;
+                channelName = currentChannel.item.name;
+                channelId = '' + currentChannel.item.id;
             }
 
             playEvent = {
                 "code": "zyr",
                 "eb": programTitle,
-                "et": currentChannel.item.customData.categoryName,
-                "eg": currentChannel.item.name,
+                "et": category,
+                "eg": channelName,
                 "ee": '' + programId,
-                "ea": '' + currentChannel.item.id,
+                "ea": channelId,
+                "eh": "live_tv/" + category.toLowerCase(),
                 "en": "live_tv",
                 "ef": "live_channel",
                 "ei": "play",
-                "ev": "web"
+                "ev": "web",
+                "fo": !seriesName ? '' : seriesName
             };
-        } else {
+            netmera.push(function (api) {
+                api.sendEvent(playEvent);
+            });
+        } else if (_isPPV) {
             playEvent = {
                 "code": "zyr",
                 "eb": _PPVInfos.epgTitle,
@@ -903,17 +1004,16 @@ var OfferManager = function (options) {
                 "eg": _PPVInfos.channelName,
                 "ee": '' + _PPVInfos.epgId,
                 "ea": '' + _PPVInfos.channelId,
+                "eh": "spor",
                 "en": "match_detail",
                 "ef": "live_match",
                 "ei": "play",
                 "ev": "web"
             };
+            netmera.push(function (api) {
+                api.sendEvent(playEvent);
+            });
         }
-        
-
-        netmera.push(function (api) {
-            api.sendEvent(playEvent);
-        });
     };
 
     var playerOnPlay = function () {
@@ -925,6 +1025,9 @@ var OfferManager = function (options) {
             _firstPlayFlag = false;
             addNetmeraPlayEvent();
             addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.PLAY);
+            if (_player.series.getActiveEpisode()) {
+                addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.PLAY_EPISODE, _player.series.getActiveEpisode());
+            }
         } else {
             addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.RESUME);
         }
@@ -968,15 +1071,64 @@ var OfferManager = function (options) {
 
     //var playerOnSeek = function () {
     //    addPlayerEventToDataLayer(PlayerEvents.SEEK);
+    //    addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.SEEK);
     //};
 
     var playerOnTimeShift = function () {
         addPlayerEventToDataLayer(PlayerEvents.TIMESHIFT);
     };
 
+    var playerOnSubtitleChanged = function (player, eventArgs) {
+        if (!_firstPlayFlag) {
+            addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.VIDEO_SUBTITLE_CHANGED, eventArgs);
+        }
+    };
+
+    //var playerOnSubtitleClosed = function (player, eventArgs) {
+    //    addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.VIDEO_SUBTITLE_CLOSED, eventArgs);
+    //};
+
+    var playerOnAudioChanged = function (player, eventArgs) {
+        if (!_firstPlayFlag) {
+            addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.VIDEO_AUDIO_CHANGED, eventArgs);
+        }
+    };
+
+    var playerOnFinished = function () {
+        addLegacyPlayerEventToDataLayer(LegacyPlayerEvents.VIDEO_COMPLETED);
+    };
+
     var playerOnSourceLoaded = function () {
         _firstPlayFlag = true;
     };
+
+    var playerOnProgramChanged = function (player, eventArgs) {
+        if (!_firstPlayFlag) {
+            var contentTitle = '';
+            var duration = '00:00:00';
+            if (eventArgs !== null && eventArgs.item !== null && eventArgs.item.item !== null) {
+                contentTitle = eventArgs.item.item.title;
+                if (eventArgs.item.item.duration !== null && eventArgs.item.item.duration > 0) {
+                    duration = Utilities.secondsToTime(eventArgs.item.item.duration);
+                }
+            }
+            var videoQuality = _player.getVideoQuality();
+            var videoResolution = '';
+            var videoBtirate = '';
+            if (videoQuality) {
+                videoResolution = videoQuality.width + 'x' + videoQuality.height;
+                videoBtirate = videoQuality.bitrate + " bps";
+            }
+            dataLayer.push({
+                event: 'changePrograms',
+                contentName: contentTitle,
+                contentLength: duration,
+                prevContentName: '',
+                videoResolution: videoResolution,
+                videoBitrate: videoBtirate
+            });
+        }
+    }
 
     var playerOnChannelSelected = function () {
         var currentChannel = _player.channels.getCurrentItem();
@@ -1033,9 +1185,13 @@ var OfferManager = function (options) {
         _player.onVideoQualityChanged.subscribe(playerOnVideoQualityChanged);
         //_player.onSeek.subscribe(playerOnSeek);
         _player.onTimeShift.subscribe(playerOnTimeShift);
-
+        _player.onSubtitleChanged.subscribe(playerOnSubtitleChanged);
+        //_player.onSubtitleClosed.subscribe(playerOnSubtitleClosed);
+        _player.onAudioChanged.subscribe(playerOnAudioChanged);
         _player.onSourceLoaded.subscribe(playerOnSourceLoaded);
+        _player.onFinished.subscribe(playerOnFinished);
         _player.channels.onChannelSelected.subscribe(playerOnChannelSelected);
+        _player.tvGuide.onProgramChanged.subscribe(playerOnProgramChanged);
     };
 
     /**
@@ -1054,10 +1210,13 @@ var OfferManager = function (options) {
         _player.onVideoQualityChanged.unsubscribe(playerOnVideoQualityChanged);
         //_player.onSeek.unsubscribe(playerOnSeek);
         _player.onTimeShift.unsubscribe(playerOnTimeShift);
-
+        _player.onSubtitleChanged.subscribe(playerOnSubtitleChanged);
+        //_player.onSubtitleClosed.subscribe(playerOnSubtitleClosed);
+        _player.onAudioChanged.subscribe(playerOnAudioChanged);
         _player.onSourceLoaded.unsubscribe(playerOnSourceLoaded);
+        _player.onFinished.subscribe(playerOnFinished);
         _player.channels.onChannelSelected.unsubscribe(playerOnChannelSelected);
-
+        _player.tvGuide.onProgramChanged.subscribe(playerOnProgramChanged);
         _player = null;
     };
 
@@ -1087,8 +1246,6 @@ var OfferManager = function (options) {
         _isPPV = true;
         _PPVInfos = PPVInfos
     }
-
-    
 };;var EPGManager = (function () {
     var _manager = {};
     var _programs = [];
@@ -1175,6 +1332,7 @@ var OfferManager = function (options) {
     };
 
     _manager.initialize = function (programs) {
+        //current playing programs
         var initialPrograms = JSON.parse(JSON.stringify(programs));
 
         _programs = initialPrograms.map(function (p) {
@@ -1182,8 +1340,7 @@ var OfferManager = function (options) {
 
             return p;
         });
-
-        refreshTimer();
+        //refreshTimer();
     };
 
     _manager.getChannelProgram = function (channelNo) {
@@ -1196,7 +1353,8 @@ var OfferManager = function (options) {
 
     return _manager;
 })();
-;var PPVPlayer = function () {
+;
+var PPVPlayer = function () {
     var self = this;
     var StreamType = { DASH: 1, SS: 2, HLS: 3, MP4: 4 };
     var DrmType = { PlayReady: 1, Widevine: 2, FairPlay: 3 };
@@ -1215,10 +1373,12 @@ var OfferManager = function (options) {
         Error: 100,
         BlackOut: 200,
         Fraud: 300,
-        ShowPreAgreement: 400
+        ShowPreAgreement: 400,
+        DeviceNotVerified: 99,
+        MessageCode : 98
     };
 
-    
+
 
 
     var initialized = false;
@@ -1256,8 +1416,8 @@ var OfferManager = function (options) {
             };
         }
 
-            document.querySelector('.match-player-wrapper').classList.remove('d-none');
-            dataElem.classList.add('d-none');
+        document.querySelector('.match-player-wrapper').classList.remove('d-none');
+        dataElem.classList.add('d-none');
         if (params.nextAction !== "Offer") {
         }
     }
@@ -1316,8 +1476,10 @@ var OfferManager = function (options) {
             else
                 responseJson['Action'] = ActionType.BlackOut;
         }
-        else
+        else {
             responseJson = responseJson.model.Data.model;
+            Irdeto.init(params.channelId, self.player);
+        }
 
 
 
@@ -1334,7 +1496,6 @@ var OfferManager = function (options) {
 
         tagManager.updatePlayerSessionId(playerSessionId);
 
-
         switch (responseJson.Action) {
             case ActionType.Login:
                 window.location = '/kullanici/giris?r=' + encodeURI(window.location.pathname);
@@ -1343,7 +1504,7 @@ var OfferManager = function (options) {
             case ActionType.Offer:
                 self.player.conviva.reportPlaybackFailed('Not Entitled');
                 offerManager = new OfferManager({ player: self.player });
-                offerManager.buildForm({ data: { orderAction: offerManager.OrderActionType.BuyPackage, offerId: params.offerId, channelId: matchInfos.channelId, from:"match-detail" } });
+                offerManager.buildForm({ data: { orderAction: offerManager.OrderActionType.BuyPackage, offerId: params.offerId, channelId: matchInfos.channelId, from: "match-detail" } });
 
                 break;
             // UNDONE: Bu case ele alınmamış
@@ -1397,6 +1558,10 @@ var OfferManager = function (options) {
 
                 var url = createSecureUrl(streamData.Url);
                 var playerSource = {};
+
+                if (responseJson.MessageCode === ActionType.MessageCode) {
+                    secDevModalCreated(responseJson.Message);
+                }
 
                 switch (streamData.StreamFormat) {
                     case StreamType.DASH:
@@ -1548,9 +1713,37 @@ var OfferManager = function (options) {
                 console.log('conviva data', streamData.CdnTypeString + ' ' + url);
                 self.player.conviva.setDefaultResource(streamData.CdnTypeString).setStreamURL(url).setContentLength(epgContentLength).setContentInfo();
                 self.player.load(playerSource);
+                break;
 
+            case ActionType.DeviceNotVerified:
+                secDevModalCreated(responseJson.Message);
                 break;
         }
+    }
+
+    function secDevModalCreated(message) {
+           var body = document.querySelector("body"),
+            div = document.createElement('div'),
+            message = message || " İçeriğe ulaşmak için lütfen cihazınızı doğrulayınız.";
+        div.classList.add("sec-dev-modal-wrapper", "device-verification-wrapper");
+        div.innerHTML = `                   
+                    <div class="sec-dev-modal">
+                      <div class="inner">
+                        <a class="close-modal btn-later-client" href="javascript:;" onclick="secDevmodel.secDevRemoveModal('.device-verification-wrapper')"></a>
+                        <div class="top">
+                            <h4>Cihazını tanımlaman gerekiyor.</h4>
+                            <p>
+                               ${message}
+                            </p>
+                        </div>
+                        <div class="btn-group">
+                            <a href="javascript:;" class="btn btn-primary btn-full" onclick="secDevmodel.secDevOpenedVerifyDevice()">Cihazı Doğrula</a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="overlay"></div>                      
+                `
+        body.prepend(div);
     }
 
     function playRequestErrorHandler(error) {
@@ -1573,8 +1766,6 @@ var OfferManager = function (options) {
     function playRequest(cmsContentId, usageSpecId) {
         showBufferingOverlay(true);
 
-        console.log('params', params);
-
         Utilities.makeFetch().fetch({
             endpoint: '/content/playrequestlivesports',
             requestParams: {
@@ -1587,6 +1778,7 @@ var OfferManager = function (options) {
         }, function (response) {
             response.json().then(playRequestSuccessHandler).catch(playRequestErrorHandler);
         }, playRequestErrorHandler);
+
     }
 
     function offerRequest() {
@@ -1616,7 +1808,7 @@ var OfferManager = function (options) {
             return;
         }
 
-       
+
     }
 
     function blackOutCancel(channelId, usageSpecId) {
@@ -1674,7 +1866,7 @@ var OfferManager = function (options) {
     function setSettingsPanelHeight() {
         const playerEl = document.getElementById('player');
         const controlbar = playerEl.querySelector('.bmpui-ui-controlbar');
-        
+
         if (!playerEl || !controlbar) return;
 
         const settingsPanel = controlbar.querySelector('.bmpui-bc-settings-panel')
@@ -1693,6 +1885,7 @@ var OfferManager = function (options) {
             key: '047ddde8-7d3f-4355-959a-4dc51ec5b10e',
             uiLanguage: 'tr',
             autoplay: true,
+            viewerId: config.viewerID,
             conviva: {
                 key: 'ceccd365fff47ef4b8016c9c274a5902896beafe',
                 logLevel: convivaLogLevels.NONE,
@@ -1707,11 +1900,20 @@ var OfferManager = function (options) {
         }
 
         self.player = bcplayer.PlayerFactory.createPlayer(playerConfig);
+        function getReferringPage() {
+            var referringTag = sessionStorage.getItem('matches-of-week-referring')
+            var referringPage = 'match_module';
+            if (referringTag === 'match_list') {
+                referringPage = 'match_list'
+                sessionStorage.removeItem('matches-of-week-referring');
+            }
 
+            return referringPage
+        }
         self.player.conviva.endSession();
         self.player.conviva.setContentMetadata({ playerType: 'match_detail_player' });
         self.player.conviva.setAssetId(matchInfos.epgId).setViewerId(config.viewerID).setStreamType(true).setContentType('live')
-            .setAssetName(matchInfos.epgTitle).setCategoryType('match').setReferringPage('match_detail')
+            .setAssetName(matchInfos.epgTitle).setCategoryType('match').setReferringPage(getReferringPage())
             .setStreamType(true).setSessionStartType('default').setReferringCategory(getReferringCategory())
             .setChannelId(matchInfos.channelId).setChannelName(matchInfos.channelName).setChannelCategoryName("SPOR")
             .setUserType(config.userType).setSeriesName(leagueName).setHomeTeamId(matchInfos.homeTeamId)
@@ -1783,7 +1985,7 @@ var OfferManager = function (options) {
 
         if (params.nextAction[0] === "Offer") {
             offerRequest();
-            
+
         } else {
             preparePlayer(config);
 
@@ -1797,12 +1999,10 @@ var OfferManager = function (options) {
             tagManager.enableHeartBeat({
                 intervalInSeconds: !isNaN(parseInt(window.heartBeatFrequency)) ? parseInt(window.heartBeatFrequency) : 60
             });
-            
+
         }
 
-
-
-
+        new PlayerKeyboardControl(self.player);
 
         initialized = true;
 
