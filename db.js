@@ -1,1 +1,1237 @@
-function MultiplayViewModel(){function t(t){try{AnalyticsHelper.Event("keep-alive","check-multiplay",null,null)}catch(i){}$.post("",function(i){if(console.log(i),i!=null&&!i.Status){if(i.isNoContent){$("video").trigger("pause");$("#form-blackout").addClass("d-none");$("#form-sales").removeClass("d-none");$(".player-tv-area").addClass("d-none");$("#player-controls").addClass("d-none");$(".play-request-cancel-text").removeClass("d-none").find(".package__text span").html(i.Message);$("html, body").animate({scrollTop:$(".play-request-cancel-text").parent().offset().top-200},800);return}$("#"+t).replaceWith($("<div/>",{id:t}));localStorage.setItem("headerErrorData",i.Message);clearInterval(n.timer);location.href="/"}})}var n=this;n.timer=null;n.init=function(){};n.checkMultiplay=function(i){clearInterval(n.timer);n.timer=setInterval(function(){t(i)},24e4)}}function FollowUpViewModel(){function t(n,t,i){try{isNullOrUndefined(wrapper)||isNullOrUndefined(wrapper.player)||(i.duration=parseInt(wrapper.player.getDuration()),i.elapsed=parseInt(wrapper.player.getCurrentTime()))}catch(r){}CsTrackerHelper.Event(CsTrackerActionType.FollowUp,n,t,null,i,null)}var n=this;n.timer=null;n.init=function(){};n.clearInterval=function(){clearInterval(n.timer)};n.setFollowUp=function(i,r,u){n.clearInterval();isNullOrUndefined(r)&&(r="Play");isNullOrUndefined(u)&&(u=null);n.timer=setInterval(function(){t(i,r,u)},12e4)}}var ContentSliderViewModel=function(){var n=6,t,r=this,u=0,i=!1;r.init=function(){};r.bindEvents=function(){function p(i,r,u){var y=u.find(".slider-item.product-item"),s=y.length,f=c(i),o=parseInt(t)*n,h=0,l,a,v;f*n>s&&(h=o-parseInt(t)*(s-(f-1)*n));l=parseInt(u.css("margin-left"));a=o*(f+1);u.width(a);v=l-o+h;u.animate({"margin-left":v+"px"},200,function(){e(i,!1)})}function l(t){var r=t.find(".slider-content-wrapper"),u=r.find(".slider-item.product-item"),f=u.length,i=parseInt(t.attr("data-page"));return(isNaN(i)&&(i=0),f>n*i)?!0:!1}function w(t){var i=parseInt(t.attr("data-page"));return(isNaN(i)&&(i=1),n<n*i)?!0:!1}function b(t){var r=t.find(".slider-content-wrapper"),u=r.find(".slider-item.product-item"),f=u.length,i=parseInt(t.attr("data-page"));return(isNaN(i)&&(i=1,h(t,i)),n*i>=f)?!1:!0}function h(n,t){n.attr("data-page",t)}function c(n){var t=parseInt(n.attr("data-page"));return isNaN(t)&&(t=1),t}function e(n,t){n.attr("data-isloading",t?"1":"0")}function a(n){var t=parseInt(n.attr("data-isloading"));return isNaN(t)&&(t=0),t==1}function v(n,t){var i=n.find("img.slider-loading");t?i.show():i.hide()}var o=$(".slider.slider-product");t=$("a.slider-item.product-item").outerWidth(!0);var y=$("div.product-actions"),s=$("div.watched-this-content-product"),f=o.find("div.slider-content-wrapper.slider-recommendation-product-height");isNullOrUndefined(f)||(u=f.find("a").length);o.each(function(){function d(n){if(n.preventDefault(),!a(r)){var t=c(r);if(!b(r)){u.removeClass("active");return}e(r,!0);h(r,t+1);l(r)?(u.addClass("active"),s.addClass("active"),i=!1):(u.removeClass("active"),i=!0);p(r,k,v);s.addClass("active")}}function g(f){var o;if(f.preventDefault(),o=c(r),!a(r)&&!(o<=1)){e(r,!0);h(r,o-1);l(r)?(u.addClass("active"),s.addClass("active"),i=!1):(u.removeClass("active"),i=!0);w(r)||s.removeClass("active");var p=parseInt(t)*n,b=parseInt(v.css("margin-left")),y=b+p;o-1<=1&&(y=0);v.animate({"margin-left":y+"px"},200,function(){e(r,!1)})}}var y=o.find(".slider-content-wrapper"),r=$(this),tt=r.find(".slider-container"),s=r.find(".slider-button.prev"),u=r.find(".slider-button.next"),k=r.find(".slider-content"),v=r.find(".slider-content-wrapper"),it=v.find(".slider-item.product-item"),rt=it.length,nt;rt>n?(u.addClass("active"),i=!1):i=!0;s.click(function(n){g(n)});u.click(function(n){d(n)});k.on("DOMMouseScroll mousewheel wheel",function(n){var t=n.wheelDelta||n.originalEvent.wheelDeltaX;if(!isNullOrUndefined(t)&&t!=0)switch(t){case 120:g(n);break;case-120:d(n)}});tt.on({mouseenter:function(){u.parents(".content-others").length==0&&(s.css("display","block"),u.css("display","block"))},mouseleave:function(){u.parents(".content-others").length==0&&(s.css("display","none"),u.css("display","none"))}});y.on({mouseenter:function(){var n=$(this);nt=setTimeout(function(){n.find(".detail").stop().animate({top:0},300)},300)},mouseleave:function(){var n=$(this);clearTimeout(nt);n.find(".detail").stop().animate({top:207},300)}},".slider-item");y.find(".slider-item.product-item").each(function(){var n=$(this),t,i,r,u;n.hasClass("recommendation-product-detail")?(t=n.find(".recommendation-product-description > p"),t.html(Utils.Substring(t.text(),85))):(i=n.find("h4"),i.html(Utils.Substring(i.html(),17)),r=n.find(".detail"),r.find(".title").find("span").each(function(){var n=$(this);n.html(Utils.Substring(n.html(),19))}),u=r.find(".description"),u.html(Utils.Substring(u.html(),100)))});f.on({mouseenter:function(){var n=$(this),t,i;n.css("opacity","0.7");t=n.find(".recommendation-product-detail-button");i=n.find("div.product-actions");i.css("display","block");t.css("color","#d7072a")},mouseleave:function(){var n=$(this),t=n.find(".recommendation-product-detail-button"),i=n.find("div.product-actions");i.css("display","none");t.css("color","#fff");n.css("opacity","1")}},"a.slider-item.product-item.recommendation-product-detail")});y.on({click:function(e){var s,h,c,o;(sendWebEyeEvet=!1,e.preventDefault(),s=$(this),h=s.attr("data-id"),isNullOrUndefined(h))||(c=s.parent("div").parent("div.recommendation-product-detail"),o=c.parent("a"),$.post("/layout/recommendationSetAsViewed",AddAntiForgeryToken({cmsContentId:h,isWatched:!0}),function(e){var s,h,l,a;if(e.status)if(u--,u==0)o.remove(),s=$(".slider-content.slider-recommendation-product-height"),v(s,!0),h={page:1,pageSize:30,homePage:!0},l="/content/SliderUserJson",$.get(l,h,function(i){loadHandlebarsScript(function(){var u=Handlebars.compile($("#template-recommendation-product-item").html()),e=u({Products:i.Contents});f.html();f.css("margin-left",t*n+"px");f.css("margin-left","0px");f.html(e);r.bindEvents();v(s,!1);return})});else{if(o.animate({right:-t+"px",width:"0%",opacity:"0.2"},400,"linear",function(){o.remove()}),c.animate({width:"0%"},400,"linear"),i&&u>n-1){a=parseInt((u-n)*-t);f.animate({"margin-left":a+"px"},400,function(){});return}return}else{PopupMessage.Pop("form-error",PopUpTitle.Error,e.message,PopUpFooterButton.Ok);return}}))},mouseenter:function(){var n=$(this);n.find("div.watched").css("display","none");n.find("div.watched-hover").css("display","block");n.find(s).css("display","block")},mouseleave:function(){var n=$(this);n.find("div.watched").css("display","block");n.find("div.watched-hover").css("display","none");n.find(s).css("display","none")}});s.on({mouseenter:function(){var n=$(this);n.css("display","none")}})};r.getSlider=function(n,t,i,u,f,e,o,s,h){var l,c;n&&$("#"+n).hide();l=$("#"+t);l.html("");c={showHeader:o,showAllLink:s,showBorder:h,title:e,pageSize:30};!i||u||f?!u||i||f?c.channelId=f:c.contentId=u:c.slug=i;$.get("/content/slider",c,function(t){t!=null&&t.length!==0&&(l.html(t),ImageCheck.ContentItem(),n&&$("#"+n).show(),r.bindEvents(l))})}},SalesViewModel=function(){function y(n){var t=!1,i=ValidationHelper.IsNullOrEmptyString(n.val())===!1;return i?(t=!0,$(".verification-error").addClass("d-none")):(t=!1,$(".confirm-box-code .verification-error").removeClass("d-none")),t}function l(n){var t=$(".offer-duration");i==null?(i=new Timer,i.addEventListener("secondsUpdated",function(){var n=i.getTotalTimeValues().seconds;n===0&&($(".resend-section").children().removeClass("d-none"),$(".confirmation-text").addClass("d-none"),$(".step-two-click").addClass("d-none"),$(".confirm-box-code .verification-error").addClass("d-none"));t.html(i.getTimeValues().toString(["minutes","seconds"]))}),i.start({countdown:!0,startValues:{minutes:0,seconds:n}})):i.reset()}function p(){ViewHelper.showOverlay();ViewHelper.showLoading();$.ajax({type:"POST",url:"/Account/ReSendVerificationCode",data:AddAntiForgeryToken({smsVerification:3})}).done(function(n){if(ViewHelper.hideLoading(),ViewHelper.hideOverlay(),n!=null){if(n.status){$(".resend-section").children().addClass("d-none");$(".confirmation-text").removeClass("d-none");$(".verification-code").removeClass("d-none");$(".step-two-click").removeClass("d-none");l(n.keyDuration);return}if(n.NeedLogin)confirmationInput,window.location=response.LoginUrl;else{if(newError){newError=!1;var i=document.querySelector(".package-offer-one"),t=document.createElement("span");t.innerText=response.message;t.style.color="red";t.style.marginTop="16px";t.style.paddingLeft="25px";i.insertAdjacentElement("afterend",t)}setTimeout(function(){newError=!0;t.remove()},errorLastingDuration)}}})}var t=this,h,n,r,a,u,c,i,v,e,o,f,s;t.OrderAction={Rent:1,Buy:2,BuyPackage:3};h="form-sales";t.id=null;t.init=function(){};t.buildForm=function(i,w,b,k){ViewHelper.showLoading();t.id=b;$.ajax({type:"POST",url:"/order/OfferSalesForm",data:AddAntiForgeryToken({orderAction:i,offerId:w,channelId:b,categoryName:k})}).done(function(p){var w,b,k,d;ViewHelper.hideLoading();n=$("#"+h);n.html(p);r=n.find("div.player-offer");o=n.find("div.box-inner.step-one");f=n.find("div.box-inner.step-two");formBlackout=n.find("div.box-inner.step-blackout");a=r.find("div.form-message");u=r.find("div.form-result");c=r.attr("data-mode");s=$(".player-tv-area");s.addClass("d-none");$(".step-bb-click-v2").click(function(){localStorage.setItem(".nextact",$(".step-bb-click-v2").attr("data-category"))});b=!0;f.addClass("d-none");formBlackout.addClass("d-none");switch(i){case t.OrderAction.Buy:w=r.find("input[name='offertobuy']").val();w===!1&&(b=!1);break;case t.OrderAction.BuyPackage:e=r.find("div.package-offers");e==null||e.length===0?b=!1:(v=e.attr("data-required"),k=e.find(".arrow-select-position"),k.click(function(n){n.preventDefault();var t=$(this);w=t.attr("data-id")}))}b===!1&&(d=n.find(".form-footer").find("a[data-action='0']"),d.hide(),n.find(".form-footer").removeClass("two-buttons"));n.find(".chosen").click(function(n){n.preventDefault();var t=$(this),i=t.attr("data-verification");switch(i){case"False":ViewHelper.showLoading();ViewHelper.showOverlay();$.ajax({type:"POST",url:"/order/processoffer",data:AddAntiForgeryToken({offerId:w})}).done(function(n){ViewHelper.hideLoading();ViewHelper.hideOverlay();switch(n.status){case 0:$(".confirmation-area .d-flex").before("<div class='txt-color-red w-100 verifySmsMessage'>"+n.message+"<\/div>");break;case 1:location.reload();break;default:$(".play-request-cancel-text").removeClass("d-none").find(".package__text span").html(n.message);$("html, body").animate({scrollTop:$(".play-request-cancel-text").parent().offset().top-200},800);setTimeout(function(){window.location.reload()},5e3)}});break;case"True":ViewHelper.showLoading();ViewHelper.showOverlay();$.ajax({type:"POST",url:"/order/sendverificationprocessoffer",data:AddAntiForgeryToken({offerId:w,smsVerification:c})}).done(function(n){ViewHelper.hideLoading();ViewHelper.hideOverlay();switch(n.status){case-3:case-2:case-1:case 0:$(".box-offer").find(".package-offers").next().html("");$(".box-offer").find(".package-offers").after("<div class='txt-color-red'>"+n.message+"<\/div>");break;case 1:o.addClass("d-none");f.find(".offer-detail-message").html(n.message);f.removeClass("d-none");l(n.keyDuration)}})}});$(".step-two-click").click(function(){var n=$(".confirmation-input");y(n)&&(ViewHelper.showLoading(),ViewHelper.showOverlay(),$.ajax({type:"POST",url:"/account/VerificationCode",data:AddAntiForgeryToken({code:n.val(),captcha:null,verificationFor:1,verificationForVersion:!0})}).done(function(n){ViewHelper.hideLoading();ViewHelper.hideOverlay();switch(n.status){case 1:o.addClass("d-none");f.addClass("d-none");formBlackout.addClass("d-none");s.removeClass("d-none");location.reload();break;default:$(".confirmation-area .d-flex").before("<div class='txt-color-red w-100 verifySmsMessage'>"+n.model.FormResult+"<\/div>");setTimeout(function(){$(".confirmation-area").find(".verifySmsMessage").remove()},3e3)}}))});$(".match-return-back-offer").click(function(){$(".verification-error").addClass("d-none");o.removeClass("d-none");f.addClass("d-none")})}).fail(function(n,t,i){console.log("Error OfferSalesForm",i);ViewHelper.hideOverlay();ViewHelper.hideLoading();$(".play-request-cancel-text").removeClass("d-none").find(".package__text span").html("Sorun ile karşılaşıldı lütfen daha sonra deneyiniz.");$("html, body").animate({scrollTop:$(".play-request-cancel-text").parent().offset().top-200},800);setTimeout(function(){$(".play-request-cancel-text").addClass("d-none")},7e3)});setTimeout(function(){$(".resend-section").click(function(){p()})},3e3)}},timerInterval,VerificationCodeViewModel=function(){function g(n){l.fadeIn();$.ajax({type:"POST",url:"/Account/ReSendVerificationCode",data:AddAntiForgeryToken({smsVerification:n})}).done(function(n){if(l.fadeOut(),n!=null)if(n.NeedLogin&&(window.location=n.LoginUrl),n.status){p.css("opacity","");p.attr("data-action",1);o.attr("data-action",0);v.css("border","none");s.css("color","");y.css("color","#3f3f3f");var u=parseInt(n.keyDuration),t=TimerCounterHelper.GetTimeDetail(parseInt(u)),i=t[0],r=t[1];TimerCounterHelper.WriteTimer(i,r,s,null);TimerCounterHelper.CountDown(i,r,s,null,o,y,v,timerInterval)}else $(".form-result").css("display","block"),$(".form-result").append('<p class="error x-code">'+n.message+"<\/p>")})}function k(t){var r=!1,u=f.val(),e=ValidationHelper.IsNullOrEmptyString(u)==!1;return e?(r=!0,i(n.Code,!1)):(r=!1,t&&(i(n.Code,!0,f.data("val-required")),c==null&&(c=f))),r}function nt(){var t=CaptchaHelper.Check(u);return t?i(n.Captcha,!1):i(n.Captcha,!0,u.attr("data-val-required")),t}function h(n,t,i){var r=e.find("p."+t);n==1?r.length==0&&e.append("<p class='error "+t+"'><span class='sp sp-icon-red-dot'>!<\/span>"+i+"<\/p>"):r.length==1&&r.remove();e.find("p").length>0?e.show():e.hide()}function i(t,i,r){switch(t){case n.Code:i?(f.addClass("error"),h(1,"x-code",r)):(f.removeClass("error"),h(0,"x-code"));break;case n.Captcha:i?h(1,"x-captcha",r):h(0,"x-captcha");break;case n.FormResult:i?h(1,"x-form-result",r):h(0,"x-form-result")}}var t=this;t.For={Order:1,BlackoutRequest:2,BlackoutCancel:3};var p,w="form-verification",d="modal modal-verification",n={Code:1,Captcha:2,FormResult:4},c,l,r,u,a,b,e,f,s,v,y,o;t.init=function(){};t.orderCompleted=null;t.buildVerificationForm=function(h,tt,it){ViewHelper.showOverlay();ViewHelper.showLoading();window.clearInterval(timerInterval);$.ajax({type:"GET",url:"/account/VerificationCodeForm",data:{}}).done(function(rt){var ut;ViewHelper.hideLoading();$("body").append("<div id='"+w+"' class='"+d+"'>");r=$("#"+w);r.html(rt);a=r.find("form");a.submit(function(n){n.preventDefault()});e=r.find("div.form-result");$(".form-content").attr("data-mode",it);b=r.find("div.form-footer");l=r.find("img.loading-form");u=$(".captcha-container.padding-spacer");f=a.find("input[name='code']");o=$("#resend-code");f.blur(function(){k(!1)});f.keypress(function(){i(n.Code,!1);i(n.FormResult,!1)});s=$(".timer-duration");v=$(".timer");y=$(".resend");p=$(".form-footer.two-buttons").find("a[data-action='1']");var ft=TimerCounterHelper.GetTimeDetail(parseInt(tt)),et=ft[0],ot=ft[1];TimerCounterHelper.WriteTimer(et,ot,s,null);TimerCounterHelper.CountDown(et,ot,s,null,o,y,v,timerInterval);u.attr("data-val-show")==="1"&&CaptchaHelper.Render(u,t.captchaCallback);ut=!0;r.find(".form-footer").find("a").click(function(o){var s,v,y,p;if(ut){ut=!1;o.preventDefault();s=$(this);v=parseInt(s.attr("data-action"));switch(v){case 0:r.remove();ViewHelper.hideOverlay();break;case 1:c=null;y=k(!0);p=nt();y&&p?(l.fadeIn(),$.ajax({type:"POST",url:"/account/VerificationCode",data:AddAntiForgeryToken({code:f.val(),captcha:CaptchaHelper.GetValue(u),verificationFor:h})}).done(function(f){l.fadeOut();var o=f.model;switch(f.status){case-3:case-2:case-1:case 0:o.ShowCaptcha&&CaptchaHelper.Render(u,t.captchaCallback);o.ValidationCode.Status==-1?i(n.Code,!0,o.ValidationCode.Message):i(n.Code,!1);o.ValidationCaptcha.Status==-1?(i(n.Captcha,!0,o.ValidationCaptcha.Message),CaptchaHelper.ModeError(u)):(i(n.Captcha,!1),CaptchaHelper.ModeValid(u));o.FormResult?i(n.FormResult,!0,o.FormResult):i(n.FormResult,!1);ut=!0;break;case 1:i(n.FormResult,!1);$(".form-content:last").remove();e.html(o.FormResult);e.show();a.remove();b.remove();t.orderCompleted!=="undefined"&&t.orderCompleted!=null&&t.orderCompleted();t.verificationCompleted!=="undefined"&&t.verificationCompleted!=null?(r.remove(),ViewHelper.hideOverlay(),t.verificationCompleted()):setTimeout(function(){r.fadeOut();window.location=document.location},5e3)}})):ut=!0;c!=null&&c.focus();break;case-1:o.preventDefault()}}});o.click(function(n){var t,i,r;n.preventDefault();t=o.attr("data-action");o.attr("data-action",0);i=parseInt(t);switch(i){case 0:n.preventDefault();break;case 1:r=$(".form-content").attr("data-mode");g(r);break;default:n.preventDefault()}})})};t.verificationCompleted=null;t.captchaCallback=function(n){CaptchaHelper.SetValue(u,n)}}
+var ContentSliderViewModel = function () {
+
+    var pageSize = 6;
+    var itemWidth;
+    var self = this;
+    var totalRecommendationItem = 0;
+    var lastPage = false;
+
+    self.init = function () {
+    };
+
+    self.bindEvents = function () {
+
+        var productSliders = $(".slider.slider-product");
+        itemWidth = $("a.slider-item.product-item").outerWidth(true);
+        var productActions = $("div.product-actions");
+        var watchedThisContent = $("div.watched-this-content-product");
+        var sliderRecommendationContentWrapper = productSliders.find("div.slider-content-wrapper.slider-recommendation-product-height");
+
+        if (!isNullOrUndefined(sliderRecommendationContentWrapper))
+            totalRecommendationItem = sliderRecommendationContentWrapper.find("a").length;
+
+        productSliders.each(function () {
+            var sliderContentWrapper = productSliders.find(".slider-content-wrapper");
+            var slider = $(this);
+            var contentSliderContainer = slider.find(".slider-container");
+
+            var btnPrev = slider.find(".slider-button.prev");
+            var btnNext = slider.find(".slider-button.next");
+            var sliderMask = slider.find(".slider-content");
+            var sliderWrapper = slider.find(".slider-content-wrapper");
+
+            var items = sliderWrapper.find(".slider-item.product-item");
+            var count = items.length;
+
+
+            if (count > pageSize) {
+                btnNext.addClass("active");
+                lastPage = false;
+            } else {
+                lastPage = true;
+            }
+
+            btnPrev.click(function (e) {
+                prevFunction(e);
+            });
+
+            btnNext.click(function (e) {
+                nextFunction(e);
+            });
+
+            sliderMask.on('DOMMouseScroll mousewheel wheel', function (event) {
+                var code = event.wheelDelta || event.originalEvent.wheelDeltaX;
+                if (!isNullOrUndefined(code) && code != 0) {
+                    switch (code) {
+                        case 120:
+                            prevFunction(event);
+                            break;
+                        case -120:
+                            nextFunction(event);
+                            break;
+                        default:
+                    }
+                }
+            });
+
+            function nextFunction(e) {
+                e.preventDefault();
+
+                if (getIsLoading(slider))
+                    return;
+
+                var pageNo = getPage(slider);
+
+                if (!hasItems(slider)) {
+                    btnNext.removeClass("active");
+                    return;
+                }
+                setIsLoading(slider, true);
+
+                setPage(slider, pageNo + 1);
+
+                if (hasNextPage(slider)) {
+                    btnNext.addClass("active");
+                    btnPrev.addClass("active");
+                    lastPage = false;
+                } else {
+                    btnNext.removeClass("active");
+                    lastPage = true;
+                }
+
+                handleNextPageMargin(slider, sliderMask, sliderWrapper);
+                btnPrev.addClass("active");
+            }
+
+
+            function prevFunction(e) {
+                e.preventDefault();
+
+                var pageNo = getPage(slider);
+
+                if (getIsLoading(slider) || pageNo <= 1)
+                    return;
+
+                setIsLoading(slider, true);
+
+                setPage(slider, pageNo - 1);
+
+                if (hasNextPage(slider)) {
+                    btnNext.addClass("active");
+                    btnPrev.addClass("active");
+                    lastPage = false;
+                } else {
+                    btnNext.removeClass("active");
+                    lastPage = true;
+                }
+
+                if (!hasPrevPage(slider)) {
+                    btnPrev.removeClass("active");
+                }
+
+                var widthBase = (parseInt(itemWidth)) * pageSize;
+                var marginLeftOfWrapper = parseInt(sliderWrapper.css("margin-left"));
+
+                var position = marginLeftOfWrapper + widthBase;
+                if (pageNo - 1 <= 1) {
+                    position = 0;
+                }
+
+                sliderWrapper.animate({ "margin-left": position + "px" }, 200, function () {
+                    setIsLoading(slider, false);
+                });
+            }
+
+            contentSliderContainer.on({
+                mouseenter: function () {
+
+                    if (btnNext.parents(".content-others").length == 0) {
+                        btnPrev.css("display", "block");
+                        btnNext.css("display", "block");
+                    }
+                },
+                mouseleave: function () {
+                    if (btnNext.parents(".content-others").length == 0) {
+                        btnPrev.css("display", "none");
+                        btnNext.css("display", "none");
+                    }
+                }
+            });
+
+            var timer;
+            sliderContentWrapper.on({
+                mouseenter: function () {
+                    var $this = $(this);
+                    timer = setTimeout(function () {
+                        $this.find('.detail').stop().animate({ top: 0 }, 300);
+                    }, 300);
+                },
+                mouseleave: function () {
+                    var $this = $(this);
+                    clearTimeout(timer);
+                    $this.find('.detail').stop().animate({ top: 207 }, 300);
+                }
+            }, ".slider-item");
+
+            sliderContentWrapper.find(".slider-item.product-item").each(function () {
+                var container = $(this);
+
+                if (container.hasClass("recommendation-product-detail")) {
+                    var desc = container.find(".recommendation-product-description > p");
+                    desc.html(Utils.Substring(desc.text(), 85));
+                } else {
+                    var title = container.find("h4");
+                    title.html(Utils.Substring(title.html(), 17));
+
+                    var detail = container.find(".detail");
+
+                    detail.find(".title").find("span").each(function () {
+                        var span = $(this);
+                        span.html(Utils.Substring(span.html(), 19));
+                    });
+
+                    var description = detail.find(".description");
+                    description.html(Utils.Substring(description.html(), 100));
+                }
+            });
+
+
+            sliderRecommendationContentWrapper.on({
+                mouseenter: function () {
+                    var $this = $(this);
+                    $this.css("opacity", "0.7");
+                    var button = $this.find(".recommendation-product-detail-button");
+                    var action = $this.find("div.product-actions");
+                    action.css("display", "block");
+                    button.css("color", "#d7072a");
+                },
+                mouseleave: function () {
+                    var $this = $(this);
+                    var button = $this.find(".recommendation-product-detail-button");
+                    var action = $this.find("div.product-actions");
+                    action.css("display", "none");
+                    button.css("color", "#fff");
+                    $this.css("opacity", "1");
+                }
+            }, "a.slider-item.product-item.recommendation-product-detail");
+        });
+
+        productActions.on({
+            click: function (e) {
+                sendWebEyeEvet = false;
+                e.preventDefault();
+                var that = $(this);
+                var id = that.attr("data-id");
+
+                if (isNullOrUndefined(id))
+                    return;
+
+                var productDetail = that.parent("div").parent("div.recommendation-product-detail");
+                var parent = productDetail.parent("a");
+
+                $.post("/layout/recommendationSetAsViewed", AddAntiForgeryToken({ cmsContentId: id, isWatched: true }), function (response) {
+
+                    if (!response.status) {
+                        PopupMessage.Pop("form-error", PopUpTitle.Error, response.message, PopUpFooterButton.Ok);
+                        return;
+                    } else {
+                        totalRecommendationItem--;
+
+                        if (totalRecommendationItem == 0) {
+                            parent.remove();
+                            var recommendationProduct = $(".slider-content.slider-recommendation-product-height");
+                            handleRecommendationItems(recommendationProduct, true);
+                            var parameter = { page: 1, pageSize: 30, homePage: true };
+                            var url = "/content/SliderUserJson";
+
+                            $.get(url, parameter, function (result) {
+                                loadHandlebarsScript(function () {
+                                    var template = Handlebars.compile($("#template-recommendation-product-item").html());
+                                    var html = template({ Products: result.Contents });
+                                    sliderRecommendationContentWrapper.html();
+                                    sliderRecommendationContentWrapper.css("margin-left", itemWidth * pageSize + "px");
+                                    sliderRecommendationContentWrapper.css("margin-left", "0px");
+
+                                    sliderRecommendationContentWrapper.html(html);
+
+                                    self.bindEvents();
+                                    handleRecommendationItems(recommendationProduct, false);
+                                    return;
+                                })
+                            });
+                        } else {
+                            parent.animate({ right: -itemWidth + "px", width: '0%', opacity: '0.2' }, 400, "linear", function () { parent.remove(); });
+                            productDetail.animate({ width: '0%' }, 400, "linear");
+                            if (lastPage && totalRecommendationItem > pageSize - 1) {
+
+                                var reTouchValue = parseInt((totalRecommendationItem - pageSize) * (-itemWidth));
+                                sliderRecommendationContentWrapper.animate({ "margin-left": reTouchValue + "px" }, 400, function () {
+                                });
+                                return;
+                            }
+                            return;
+                        }
+                    }
+                });
+            },
+            mouseenter: function (e) {
+                var $this = $(this);
+                $this.find("div.watched").css("display", "none");
+                $this.find("div.watched-hover").css("display", "block");
+                $this.find(watchedThisContent).css("display", "block");
+            },
+            mouseleave: function (e) {
+                var $this = $(this);
+                $this.find("div.watched").css("display", "block");
+                $this.find("div.watched-hover").css("display", "none");
+                $this.find(watchedThisContent).css("display", "none");
+            }
+        });
+
+        watchedThisContent.on({
+            mouseenter: function () {
+                var $this = $(this);
+                $this.css("display", "none");
+            }
+        });
+
+        function handleNextPageMargin(slider, sliderMask, sliderWrapper) {
+
+            var contentItems = sliderWrapper.find(".slider-item.product-item");
+            var itemCount = contentItems.length;
+
+            var pageNo = getPage(slider);
+
+            var widthBase = (parseInt(itemWidth)) * pageSize;
+
+            var retouch = 0;
+            if (pageNo * pageSize > itemCount) {
+                retouch = widthBase - (parseInt(itemWidth)) * (itemCount - ((pageNo - 1) * pageSize));
+            }
+
+            var marginLeftOfWrapper = parseInt(sliderWrapper.css("margin-left"));
+
+            var widthNew = (widthBase * (pageNo + 1));
+            sliderWrapper.width(widthNew);
+
+            var position = marginLeftOfWrapper - widthBase + retouch;
+            sliderWrapper.animate({ "margin-left": position + "px" }, 200, function () {
+                setIsLoading(slider, false);
+            });
+        }
+
+        function hasNextPage(slider) {
+            var sliderWrapper = slider.find(".slider-content-wrapper");
+            var contentItems = sliderWrapper.find(".slider-item.product-item");
+            var itemCount = contentItems.length;
+
+            var page = parseInt(slider.attr("data-page"));
+            if (isNaN(page))
+                page = 0;
+
+            if (itemCount > pageSize * page)
+                return true;
+
+            return false;
+        }
+
+        function hasPrevPage(slider) {
+            var page = parseInt(slider.attr("data-page"));
+            if (isNaN(page))
+                page = 1;
+
+            if (pageSize < pageSize * page)
+                return true;
+
+            return false;
+        }
+
+        function hasItems(slider) {
+
+            var sliderWrapper = slider.find(".slider-content-wrapper");
+            var contentItems = sliderWrapper.find(".slider-item.product-item");
+            var itemCount = contentItems.length;
+
+            var page = parseInt(slider.attr("data-page"));
+            if (isNaN(page)) {
+                page = 1;
+                setPage(slider, page);
+            }
+
+            if (pageSize * page >= itemCount)
+                return false;
+
+            return true;
+        }
+
+        function setPage(slider, page) {
+            slider.attr("data-page", page);
+        }
+
+        function getPage(slider) {
+            var page = parseInt(slider.attr("data-page"));
+            if (isNaN(page))
+                page = 1;
+
+            return page;
+        }
+
+        function setIsLoading(slider, isLoading) {
+            slider.attr("data-isloading", isLoading ? "1" : "0");
+        }
+
+        function getIsLoading(slider) {
+            var isLoading = parseInt(slider.attr("data-isloading"));
+            if (isNaN(isLoading))
+                isLoading = 0;
+
+            return isLoading == 1;
+        }
+
+        function handleRecommendationItems(recommendationProduct, isLoading) {
+            var recommendationLoading = recommendationProduct.find("img.slider-loading");
+            if (isLoading) {
+                recommendationLoading.show();
+            } else {
+                recommendationLoading.hide();
+            }
+        }
+    };
+
+    self.getSlider = function (domIdToShow, domId, term, contentId, channelId, title, showHeader, showAllLink, showBorder) {
+
+        if (domIdToShow) {
+            $("#" + domIdToShow).hide();
+        }
+
+        var sliderWrapper = $("#" + domId);
+        sliderWrapper.html("");
+
+        var dataParameter = {
+            showHeader: showHeader,
+            showAllLink: showAllLink,
+            showBorder: showBorder,
+            title: title,
+            pageSize: 30
+        };
+
+        if (term && (!contentId && !channelId))
+            dataParameter.slug = term;
+        else if (contentId && (!term && !channelId))
+            dataParameter.contentId = contentId;
+        else
+            dataParameter.channelId = channelId;
+
+        $.get("/content/slider", dataParameter, function (response) {
+
+            if (response == null || response.length === 0)
+                return;
+
+            sliderWrapper.html(response);
+            ImageCheck.ContentItem();
+
+            if (domIdToShow) {
+                $("#" + domIdToShow).show();
+            }
+
+            self.bindEvents(sliderWrapper);
+
+        });
+    };
+}
+
+;var SalesViewModel = function () {
+    var self = this;
+
+    self.OrderAction = { Rent: 1, Buy: 2, BuyPackage: 3 };
+    var constFormId = "form-sales";
+
+    var containerForm;
+
+    var formContent;
+    var formMessage;
+    var formResult;
+    var dataMode;
+    var offerTimer;
+    var offersRequiredMessage;
+    var offersWrapper;
+    var formStepOne;
+    var formStepTwo;
+    var playerTvArea;
+
+    self.id = null;
+    self.init = function () {
+
+    };
+
+    self.buildForm = function (orderAction, offerId, channelId, categoryName) {
+        ViewHelper.showLoading();
+
+        self.id = channelId;
+        $.ajax({
+            type: "POST",
+            url: "/order/OfferSalesForm",
+            data: AddAntiForgeryToken({ orderAction: orderAction, offerId: offerId, channelId: channelId, categoryName: categoryName })
+        }).done(function (response) {
+            ViewHelper.hideLoading();
+
+            containerForm = $("#" + constFormId);
+            containerForm.html(response);
+
+            formContent = containerForm.find("div.player-offer");
+            formStepOne = containerForm.find("div.box-inner.step-one");
+            formStepTwo = containerForm.find("div.box-inner.step-two");
+            formBlackout = containerForm.find("div.box-inner.step-blackout");
+            formMessage = formContent.find("div.form-message");
+            formResult = formContent.find("div.form-result");
+            dataMode = formContent.attr("data-mode");
+
+            playerTvArea = $(".player-tv-area");
+            playerTvArea.addClass("d-none");
+
+            $(".step-bb-click-v2").click(function () {
+                localStorage.setItem(".nextact", $(".step-bb-click-v2").attr("data-category"));
+            });
+
+            var offerToBuy;
+            var isThereAnyOfferToBuy = true;
+
+            //formStepOne.addClass("d-none");
+            formStepTwo.addClass("d-none");
+            formBlackout.addClass("d-none");
+
+            switch (orderAction) {
+                case self.OrderAction.Buy:
+                    {
+                        offerToBuy = formContent.find("input[name='offertobuy']").val();
+                        if (offerToBuy === false)
+                            isThereAnyOfferToBuy = false;
+                    }
+                    break;
+                case self.OrderAction.BuyPackage:
+                    {
+                        offersWrapper = formContent.find("div.package-offers");
+                        if (offersWrapper == null || offersWrapper.length === 0) {
+                            isThereAnyOfferToBuy = false;
+                        }
+                        else {
+                            offersRequiredMessage = offersWrapper.attr("data-required");
+                            var offers = offersWrapper.find(".arrow-select-position");
+                            offers.click(function (e) {
+                                e.preventDefault();
+                                var offerItem = $(this);
+                                offerToBuy = offerItem.attr("data-id");
+                            });
+                        }
+                    }
+                    break;
+            }
+
+
+            if (isThereAnyOfferToBuy === false) {
+                var cancelButton = containerForm.find(".form-footer").find("a[data-action='0']");
+                cancelButton.hide();
+                containerForm.find(".form-footer").removeClass("two-buttons");
+            }
+
+            containerForm.find(".chosen").click(function (e) {
+                e.preventDefault();
+
+                var link = $(this);
+                var verification = link.attr("data-verification");
+                switch (verification) {
+                    case "False":
+                        {
+                            ViewHelper.showLoading();
+                            ViewHelper.showOverlay();
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/order/processoffer",
+                                data: AddAntiForgeryToken({ offerId: offerToBuy })
+                            }).done(function (responseOrder) {
+
+
+                                ViewHelper.hideLoading();
+                                ViewHelper.hideOverlay();
+
+                                switch (responseOrder.status) {
+                                    //case -3:
+                                    //case -2:
+                                    //case -1:
+                                    case 0:
+                                        {
+                                            // message
+                                            //alert("Hata");
+                                            //$("#player-controls").addClass("d-none");
+                                            $(".confirmation-area .d-flex").before("<div class='txt-color-red w-100 verifySmsMessage'>" + responseOrder.message + "</div>");
+                                        }
+                                        break;
+                                    case 1:
+                                        {
+                                            // message
+                                            location.reload();
+                                        }
+                                        break;
+                                    default:
+                                        {
+                                            $(".play-request-cancel-text").removeClass("d-none").find(".package__text span").html(responseOrder.message);
+                                            $('html, body').animate({ scrollTop: ($(".play-request-cancel-text").parent().offset().top - 200) }, 800);
+                                            setTimeout(function () { window.location.reload()},5000);
+                                            break;
+                                        }
+                                }
+
+                            });
+                        }
+                        break;
+                    case "True":
+                        {
+                            ViewHelper.showLoading();
+                            ViewHelper.showOverlay();
+
+                            $.ajax({
+                                type: "POST",
+                                url: "/order/sendverificationprocessoffer",
+                                data: AddAntiForgeryToken({ offerId: offerToBuy, smsVerification: dataMode })
+                            }).done(function (responseOrder) {
+
+                                ViewHelper.hideLoading();
+                                ViewHelper.hideOverlay();
+
+                                switch (responseOrder.status) {
+                                    case -3:
+                                    case -2:
+                                    case -1:
+                                    case 0:
+                                        {
+                                            $(".box-offer").find(".package-offers").next().html("");
+                                            $(".box-offer").find(".package-offers").after("<div class='txt-color-red'>" + responseOrder.message + "</div>");
+                                        }
+                                        break;
+                                    case 1:
+                                        {
+                                            formStepOne.addClass("d-none");
+                                            formStepTwo.find(".offer-detail-message").html(responseOrder.message);
+                                            formStepTwo.removeClass("d-none");
+                                            timer(responseOrder.keyDuration);
+                                        }
+                                        break;
+                                }
+
+                            });
+                        }
+                        break;
+                }
+
+
+            });
+
+            $(".step-two-click").click(function () {
+
+                var confirmationInput = $(".confirmation-input");
+
+                if (!validateCode(confirmationInput)) {
+                    return;
+                }
+
+                ViewHelper.showLoading();
+                ViewHelper.showOverlay();
+
+                $.ajax({
+                    type: "POST",
+                    url: "/account/VerificationCode",
+                    data: AddAntiForgeryToken({
+                        code: confirmationInput.val(),
+                        captcha: null,
+                        verificationFor: 1,
+                        verificationForVersion: true
+                    })
+                }).done(function (orderVerificationResult) {
+
+                    ViewHelper.hideLoading();
+                    ViewHelper.hideOverlay();
+
+                    switch (orderVerificationResult.status) {
+                        case 1:
+                            {
+                                formStepOne.addClass("d-none");
+                                formStepTwo.addClass("d-none");
+                                formBlackout.addClass("d-none");
+                                playerTvArea.removeClass("d-none");
+
+                                // Mustafa
+                                location.reload();
+                                break;
+                            }
+                        default:
+                            {
+                                // Hata 
+                                //alert(orderVerificationResult.model.FormResult);
+                                $(".confirmation-area .d-flex").before("<div class='txt-color-red w-100 verifySmsMessage'>" + orderVerificationResult.model.FormResult + "</div>");
+                                setTimeout(function () { $(".confirmation-area").find(".verifySmsMessage").remove(); }, 3000)
+                                break;
+                            }
+                    }
+                });
+            });
+
+            $(".match-return-back-offer").click(function () {
+                $('.verification-error').addClass('d-none');
+                formStepOne.removeClass("d-none");
+                formStepTwo.addClass("d-none");
+            });
+        }).fail(function (jqXHR, textStatus, errorThrown) {
+            console.log("Error OfferSalesForm", errorThrown);
+            ViewHelper.hideOverlay();
+            ViewHelper.hideLoading();
+
+            $(".play-request-cancel-text").removeClass("d-none").find(".package__text span").html("Sorun ile karşılaşıldı lütfen daha sonra deneyiniz.");
+            $('html, body').animate({ scrollTop: ($(".play-request-cancel-text").parent().offset().top - 200) }, 800);
+
+            setTimeout(function () {$(".play-request-cancel-text").addClass("d-none") }, 7000);
+        });
+
+        setTimeout(function () {
+            $(".resend-section").click(function () {
+                reSendCode();
+            });
+        }, 3000);
+    };
+
+    function validateCode(input) {
+        var result = false;
+        var validItem = ValidationHelper.IsNullOrEmptyString(input.val()) === false;
+
+        if (validItem) {
+            result = true;
+            $('.verification-error').addClass('d-none');
+        } else {
+            result = false;
+            $('.confirm-box-code .verification-error').removeClass('d-none');
+        }
+
+        return result;
+    }
+
+    function handleFormSummary(addOrDelete, type, message) {
+
+        var item = formResult.find("p." + type);
+
+        if (addOrDelete == 1) {
+            if (item.length == 0) {
+                formResult.append("<p class='error " + type + "'><span class='sp sp-icon-red-dot'>!</span>" + message + "</p>");
+            }
+        } else {
+            if (item.length == 1)
+                item.remove();
+        }
+
+        if (formResult.find("p").length > 0)
+            formResult.show();
+        else
+            formResult.hide();
+    }
+
+    function timer(duration) {
+        var offerDuration = $(".offer-duration");
+       
+        if (offerTimer == null) {
+            offerTimer = new Timer();
+            offerTimer.addEventListener('secondsUpdated',
+                function (e) {
+                    var totalSecond = offerTimer.getTotalTimeValues().seconds;
+                    if (totalSecond === 0) {
+                        $(".resend-section").children().removeClass("d-none");
+                        $(".confirmation-text").addClass("d-none");
+                        $(".step-two-click").addClass("d-none");
+                        $('.confirm-box-code .verification-error').addClass('d-none');
+                    }
+                    offerDuration.html(offerTimer.getTimeValues().toString(['minutes', 'seconds']));
+                });
+            offerTimer.start({ countdown: true, startValues: { minutes: 0, seconds: duration } });
+        } else {
+            offerTimer.reset();
+        }
+    }
+
+    function reSendCode() {
+
+        ViewHelper.showOverlay();
+        ViewHelper.showLoading();
+
+        $.ajax({
+            type: "POST",
+            url: "/Account/ReSendVerificationCode",
+            data: AddAntiForgeryToken({ smsVerification: 3 })
+        }).done(function (responseResend) {
+            ViewHelper.hideLoading();
+            ViewHelper.hideOverlay();
+
+            if (responseResend == null) {
+                return;
+            }
+
+            if (responseResend.status) {
+                $(".resend-section").children().addClass("d-none");
+                $(".confirmation-text").removeClass("d-none");
+                $(".verification-code").removeClass("d-none");
+                $(".step-two-click").removeClass("d-none");
+                timer(responseResend.keyDuration);
+                return;
+            }
+
+            if (responseResend.NeedLogin) {
+                confirmationInput
+                window.location = response.LoginUrl;
+            } else {
+                // Hata
+                if (newError) {
+                    newError = false;
+                    var starContainer = document.querySelector('.package-offer-one');
+                    var spanEl = document.createElement('span');
+                    spanEl.innerText = response.message;
+                    spanEl.style.color = 'red';
+                    spanEl.style.marginTop = '16px';
+                    spanEl.style.paddingLeft = '25px';
+                    starContainer.insertAdjacentElement('afterend', spanEl);
+                }
+                setTimeout(function () {
+                    newError = true;
+                    spanEl.remove();
+                }, errorLastingDuration);
+
+            }
+
+        });
+    }
+};
+;var timerInterval;
+
+var VerificationCodeViewModel = function () {
+    var self = this;
+
+    self.For = { Order: 1, BlackoutRequest: 2, BlackoutCancel: 3 };
+    var okButton;
+    var constFormId = "form-verification";
+    var constFormClass = "modal modal-verification";
+
+    var formItems = { Code: 1, Captcha: 2, FormResult: 4 };
+    var errorField;
+
+    var loadingForm;
+    var containerForm;
+    var captchaContainer;
+    var form;
+    var formFooter;
+    var formResult;
+    var txtCode;
+    var counter;
+    var timer;
+    var resendText;
+    var resendCode;
+
+    self.init = function () { };
+
+    self.orderCompleted = null;
+
+    self.buildVerificationForm = function (forWhat, keyDuration, dataMode) {
+        ViewHelper.showOverlay();
+        ViewHelper.showLoading();
+
+        window.clearInterval(timerInterval);
+
+        $.ajax({
+            type: "GET",
+            url: "/account/VerificationCodeForm",
+            data: {}
+        }).done(function (response) {
+            ViewHelper.hideLoading();
+            $("body").append("<div id='" + constFormId + "' class='" + constFormClass + "'>");
+
+            containerForm = $("#" + constFormId);
+            containerForm.html(response);
+
+            form = containerForm.find("form");
+            form.submit(function (e) {
+                e.preventDefault();
+            });
+            formResult = containerForm.find("div.form-result");
+            $(".form-content").attr("data-mode", dataMode);
+            formFooter = containerForm.find("div.form-footer");
+            loadingForm = containerForm.find("img.loading-form");
+            captchaContainer = $(".captcha-container.padding-spacer");
+            txtCode = form.find("input[name='code']");
+            resendCode = $("#resend-code");
+            txtCode.blur(function () {
+                validateCode(false);
+            });
+            txtCode.keypress(function () {
+                handleErrorStates(formItems.Code, false);
+                handleErrorStates(formItems.FormResult, false);
+            });
+
+            counter = $(".timer-duration");
+            timer = $(".timer");
+            resendText = $(".resend");
+            okButton=$(".form-footer.two-buttons").find("a[data-action='" + 1 + "']");
+
+
+            var detailedTime = TimerCounterHelper.GetTimeDetail(parseInt(keyDuration));
+            var mins = detailedTime[0];
+            var seconds = detailedTime[1];
+            TimerCounterHelper.WriteTimer(mins, seconds, counter, null);
+            TimerCounterHelper.CountDown(mins, seconds, counter, null, resendCode, resendText, timer, timerInterval);
+
+            if (captchaContainer.attr("data-val-show") === "1") {
+                CaptchaHelper.Render(captchaContainer, self.captchaCallback);
+            }
+
+            var isClickable = true;
+            containerForm.find(".form-footer").find("a").click(function (e) {
+                if (isClickable) {
+                    isClickable = false;
+                    e.preventDefault();
+
+                    var link = $(this);
+
+                    var action = parseInt(link.attr("data-action"));
+
+                    switch (action) {
+                        case 0:
+                            {
+                                containerForm.remove();
+                                ViewHelper.hideOverlay();
+                            }
+                            break;
+                        case 1:
+                            {
+                                errorField = null;
+
+                                var isValidCode = validateCode(true);
+                                var isValidCaptcha = validateCaptcha();
+
+                                if (isValidCode && isValidCaptcha) {
+
+                                    loadingForm.fadeIn();
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "/account/VerificationCode",
+                                        data: AddAntiForgeryToken({ code: txtCode.val(), captcha: CaptchaHelper.GetValue(captchaContainer), verificationFor: forWhat })
+                                    }).done(function (responseOrder) {
+                                        loadingForm.fadeOut();
+                                        var model = responseOrder.model;
+
+                                        switch (responseOrder.status) {
+
+                                            case -3:
+                                            case -2:
+                                            case -1:
+                                            case 0:
+                                                {
+                                                    if (model.ShowCaptcha) {
+                                                        CaptchaHelper.Render(captchaContainer, self.captchaCallback);
+                                                    }
+
+                                                    if (model.ValidationCode.Status == -1) {
+                                                        handleErrorStates(formItems.Code, true, model.ValidationCode.Message);
+                                                    } else {
+                                                        handleErrorStates(formItems.Code, false);
+                                                    }
+
+                                                    if (model.ValidationCaptcha.Status == -1) {
+                                                        handleErrorStates(formItems.Captcha, true, model.ValidationCaptcha.Message);
+                                                        CaptchaHelper.ModeError(captchaContainer);
+                                                    } else {
+                                                        handleErrorStates(formItems.Captcha, false);
+                                                        CaptchaHelper.ModeValid(captchaContainer);
+                                                    }
+
+                                                    if (model.FormResult) {
+                                                        handleErrorStates(formItems.FormResult, true, model.FormResult);
+                                                    } else {
+                                                        handleErrorStates(formItems.FormResult, false);
+                                                    }
+                                                    isClickable = true;
+                                                }
+                                                break;
+                                            case 1:
+                                                {
+                                                    handleErrorStates(formItems.FormResult, false);
+                                                    $(".form-content:last").remove();
+                                                    formResult.html(model.FormResult);
+                                                    formResult.show();
+                                                    form.remove();
+                                                    formFooter.remove();
+
+                                                    if (self.orderCompleted !== "undefined" && self.orderCompleted != null) {
+                                                        self.orderCompleted();
+                                                    }
+
+                                                    if (self.verificationCompleted !== "undefined" && self.verificationCompleted != null) {
+                                                        containerForm.remove();
+                                                        ViewHelper.hideOverlay();
+                                                        self.verificationCompleted();
+
+                                                    } else {
+
+                                                        setTimeout(function () {
+
+                                                            containerForm.fadeOut();
+                                                            window.location = document.location;
+
+                                                        }, 5000);
+                                                    }
+
+
+                                                }
+                                                break;
+                                        }
+
+                                    });
+                                } else {
+                                    isClickable = true;
+                                }
+
+                                if (errorField != null)
+                                    errorField.focus();
+                                
+                            }
+                            break;
+                        case -1:
+                            {
+                                e.preventDefault();
+                            }
+                            break;
+                    }
+                }
+
+            });
+
+            resendCode.click(function (e) {
+                e.preventDefault();
+                var dataAction = resendCode.attr("data-action");
+                resendCode.attr("data-action", 0);
+                var action = parseInt(dataAction);
+                switch (action) {
+                    case 0:
+                        e.preventDefault();
+                        break;
+                    case 1:
+                        var mode = $(".form-content").attr("data-mode");
+                        reSendCode(mode);
+                        break;
+                    default:
+                        e.preventDefault();
+                };
+            });
+        });
+    };
+
+    self.verificationCompleted = null;
+
+    self.captchaCallback = function (response) {
+        CaptchaHelper.SetValue(captchaContainer, response);
+    };
+
+    function reSendCode(mode) {
+        loadingForm.fadeIn();
+
+        $.ajax({
+            type: "POST",
+            url: "/Account/ReSendVerificationCode",
+            data: AddAntiForgeryToken({ smsVerification: mode })
+        }).done(function (response) {
+            loadingForm.fadeOut();
+            if (response == null) {
+                return;
+            }
+
+            if (response.NeedLogin) {
+                window.location = response.LoginUrl;
+            }
+
+            if (response.status) {
+                okButton.css("opacity", "");
+                okButton.attr('data-action', 1);
+                resendCode.attr("data-action", 0);
+                timer.css("border", 'none');
+                counter.css("color", "");
+                resendText.css("color", "#3f3f3f");
+                var totalKeyDuration = parseInt(response.keyDuration);
+                var detailedTime = TimerCounterHelper.GetTimeDetail(parseInt(totalKeyDuration));
+                var mins = detailedTime[0];
+                var seconds = detailedTime[1];
+                TimerCounterHelper.WriteTimer(mins, seconds, counter, null);
+                TimerCounterHelper.CountDown(mins, seconds, counter, null, resendCode, resendText, timer, timerInterval);
+            } else {
+                $(".form-result").css("display", "block");
+                $(".form-result").append('<p class="error x-code">' + response.message + '</p>');
+            }
+        });
+    }
+
+    function validateCode(isClicked) {
+        var result = false;
+
+        var item = txtCode.val();
+        var validItem = ValidationHelper.IsNullOrEmptyString(item) == false;
+
+        if (validItem) {
+            result = true;
+            handleErrorStates(formItems.Code, false);
+        } else {
+            result = false;
+            if (isClicked) {
+                handleErrorStates(formItems.Code, true, txtCode.data("val-required"));
+                if (errorField == null)
+                    errorField = txtCode;
+            }
+        }
+
+        return result;
+    }
+
+    function validateCaptcha() {
+
+        var isOk = CaptchaHelper.Check(captchaContainer);
+
+        if (isOk) {
+            handleErrorStates(formItems.Captcha, false);
+        } else {
+            handleErrorStates(formItems.Captcha, true, captchaContainer.attr("data-val-required"));
+        }
+
+        return isOk;
+    }
+
+    function handleFormSummary(addOrDelete, type, message) {
+
+        var item = formResult.find("p." + type);
+
+        if (addOrDelete == 1) {
+            if (item.length == 0) {
+                formResult.append("<p class='error " + type + "'><span class='sp sp-icon-red-dot'>!</span>" + message + "</p>");
+            }
+        } else {
+            if (item.length == 1)
+                item.remove();
+        }
+
+        if (formResult.find("p").length > 0)
+            formResult.show();
+        else
+            formResult.hide();
+    }
+
+    function handleErrorStates(formItem, showMe, message) {
+        switch (formItem) {
+            case formItems.Code:
+                {
+                    if (showMe) {
+                        txtCode.addClass("error");
+                        handleFormSummary(1, "x-code", message);
+                    } else {
+                        txtCode.removeClass("error");
+                        handleFormSummary(0, "x-code");
+                    }
+                }
+                break;
+            case formItems.Captcha:
+                {
+                    if (showMe) {
+                        handleFormSummary(1, "x-captcha", message);
+                    } else {
+                        handleFormSummary(0, "x-captcha");
+                    }
+                }
+                break;
+            case formItems.FormResult:
+                {
+                    if (showMe) {
+                        handleFormSummary(1, "x-form-result", message);
+                    } else {
+                        handleFormSummary(0, "x-form-result");
+                    }
+                }
+                break;
+        }
+    }
+};
+;function MultiplayViewModel () {
+    var self = this;
+
+    self.timer = null;
+
+    self.init = function () { };
+
+    self.checkMultiplay = function (playerDomId) {
+        clearInterval(self.timer);
+        self.timer = setInterval(function () { check(playerDomId); }, 1000 * 60 * 4);
+    };
+
+    function check(playerDomId) {
+
+        try {
+            AnalyticsHelper.Event("keep-alive", "check-multiplay", null, null);
+
+        } catch (e) {
+
+        }
+
+        $.post("", function (response) {
+            console.log(response);
+            if (response == null || response.Status)
+                return;
+
+            if (response.isNoContent) {
+
+                $('video').trigger('pause');
+                $("#form-blackout").addClass("d-none");
+                $("#form-sales").removeClass("d-none");
+                $(".player-tv-area").addClass("d-none");
+                $("#player-controls").addClass("d-none");
+
+                $(".play-request-cancel-text").removeClass("d-none").find(".package__text span").html(response.Message);
+                $('html, body').animate({ scrollTop: ($(".play-request-cancel-text").parent().offset().top - 200) }, 800);
+
+                return;
+            }
+
+            $("#" + playerDomId).replaceWith($("<div/>", { id: playerDomId }));
+            localStorage.setItem("headerErrorData", response.Message);
+
+
+            clearInterval(self.timer);
+            location.href = "/";
+        });
+    }
+};;
+function FollowUpViewModel () {
+    var self = this;
+
+    self.timer = null;
+
+    self.init = function () { };
+
+    self.clearInterval = function() {
+        clearInterval(self.timer);
+    };
+
+    self.setFollowUp = function (referenceId, label, playAttributes) {
+        self.clearInterval();
+
+        if (isNullOrUndefined(label))
+            label = "Play";
+        if (isNullOrUndefined(playAttributes))
+            playAttributes = null;
+
+        self.timer = setInterval(function () { followUp(referenceId, label, playAttributes); }, 1000 * 60 * 2);
+    };
+
+    function followUp(referenceId, label, playAttributes) {
+
+        try {
+            if (!isNullOrUndefined(wrapper) && !isNullOrUndefined(wrapper.player)) {
+                playAttributes.duration = parseInt(wrapper.player.getDuration());
+                playAttributes.elapsed = parseInt(wrapper.player.getCurrentTime());
+            }
+        } catch (e) {
+            // ignore
+        } 
+
+        CsTrackerHelper.Event(CsTrackerActionType.FollowUp, referenceId, label, null, playAttributes
+            , null);
+    }
+};;
