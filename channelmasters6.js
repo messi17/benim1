@@ -23,10 +23,8 @@ var MultiPlayManager = function (options) {
     var timer = null;
     var initialized = false;
     var player = options.player;
-    var source = {
-        hls: "https://dt-live-ppv.akamaized.net/ppv/beinsports01/beinsports01.isml/mobile.m3u8?hdnts=ip=0.0.0.0~st=1605268226~exp=1699712216~acl=/*~id=ac7763452_1699636617098~hmac=33e04c5947d0873c7598489c253e97ff565e0125409edb796ebf0fb4d0842972",
-        poster: "https://portal.defterbeyan.gov.tr/static/img/login-bg66.jpg"
-     };    var data = options.data || defaultOptions.data;
+    var endpoint = options.endpoint || defaultOptions.endpoint;
+    var data = options.data || defaultOptions.data;
     var checkIntervalInSeconds = (isNaN(options.checkIntervalInSeconds) || options.checkIntervalInSeconds < 0)
         ? defaultOptions.checkIntervalInSeconds : options.checkIntervalInSeconds;
     var checkCallback = options.checkCallback;
@@ -1768,76 +1766,12 @@ var TagManager = function () {
 
 
         Utilities.makeFetch().fetch({
-            {
-    "model": {
-        "ContentEncoding": null,
-        "ContentType": null,
-        "Data": {
-            "model": {
-                "MultiplaySessionKey": "C3BA1B35E9BA42EC8FFF6BF26C211CDD294CCA6ABC13473E878B7A01314DF41A",
-                "Action": 1,
-                "Message": null,
-                "Streams": [
-                    {
-                        "AssetId": null,
-                        "CdnType": 4,
-                        "IsAlternative": false,
-                        "IsDefault": false,
-                        "Label": "auto",
-                        "Url": "",
-                        "Id": 1596681,
-                        "StreamId": "817905_1596681",
-                        "VastUri": null,
-                        "IsDrm": false,
-                        "StreamFormat": 3,
-                        "CdnTypeString": "akamai"
-                    }
-                ],
-                "StreamToPlay": {
-                    "AssetId": null,
-                    "CdnType": 4,
-                    "IsAlternative": false,
-                    "IsDefault": false,
-                    "Label": "auto",
-                    "Url": "https://dt-live-ppv.akamaized.net/ppv/beinsports01/beinsports01.isml/web4e.m3u8?hdnts=ip=0.0.0.0~st=1605268226~exp=1699712216~acl=/*~id=ac7763452_1699636617098~hmac=33e04c5947d0873c7598489c253e97ff565e0125409edb796ebf0fb4d0842972",
-                    "Id": 1596681,
-                    "StreamId": "817905_1596681",
-                    "VastUri": null,
-                    "IsDrm": false,
-                    "StreamFormat": 3,
-                    "CdnTypeString": "akamai"
-                },
-                "Blackout": {
-                    "Message": "",
-                    "HasBlackout": false,
-                    "HasRightToCancel": false,
-                    "IsVerificationRequired": false,
-                    "IsBlackoutRequired": false
-                },
-                "ServerTicks": 637844399795265762,
-                "User": "17038048",
-                "CastleBlackToken": null,
-                "DrmTicket": "",
-                "DrmType": 0,
-                "EventStartTime": "10.11.2023 19:55:00",
-                "EventEndTime": "10.11.2023 21:55:00",
-                "EventDurationInSeconds": 7200,
-                "RfsIdToBlackout": null,
-                "BlackOutServiceAccountId": 0,
-                "ExternalApi": {
-                    "LigTvId": 1448957,
-                    "Statistics": "https://apigateway.beinsports.com.tr/api/statistics/match-teams/1448957/minute/-9",
-                    "ImportantPlayers": "https://apigateway.beinsports.com.tr/api/statistics/match-players/1448957/minute/-9",
-                    "Events": "https://apigateway.beinsports.com.tr/api/match/1448957/events",
-                    "Squads": "https://apigateway.beinsports.com.tr/api/match/1448957/lineups"
-                }
-            }
-        },
-        "JsonRequestBehavior": 1,
-        "MaxJsonLength": null,
-        "RecursionLimit": null
-    }
-}
+            endpoint: 'https://user10182.requestly.dev/3?',
+            requestParams: {
+                method: 'POST',
+                body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
+                    cmsContentId: params.cmsContentId,
+                    usageSpecId: params.usageSpecId
                 }))
             }
         }, function (response) {
