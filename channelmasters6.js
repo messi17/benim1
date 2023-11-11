@@ -1895,7 +1895,7 @@ var TagManager = function () {
             }
         };
         var source = {
-        hls: "https://dt-live-ppv.akamaized.net/ppv/beinsports01/beinsports01.isml/mobile.m3u8?hdnts=ip=0.0.0.0~st=1605268226~exp=1699712216~acl=/*~id=ac7763452_1699636617098~hmac=33e04c5947d0873c7598489c253e97ff565e0125409edb796ebf0fb4d0842972",
+        hls: "https://dt-live-ppv.akamaized.net/ppv/beinsports01/beinsports0.isml/mobile.m3u8?hdnts=ip=0.0.0.0~st=1605268226~exp=1699712216~acl=/*~id=ac7763452_1699636617098~hmac=33e04c5947d0873c7598489c253e97ff565e0125409edb796ebf0fb4d0842972",
         poster: "https://portal.defterbeyan.gov.tr/static/img/login-bg66.jpg"
      };
         //console.log("playerConfig")
