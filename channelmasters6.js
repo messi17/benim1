@@ -1766,7 +1766,7 @@ var TagManager = function () {
 
 
         Utilities.makeFetch().fetch({
-            endpoint: 'https://user10182.requestly.dev/3?',
+            endpoint: 'sorguurl',
             requestParams: {
                 method: 'POST',
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
