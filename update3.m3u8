@@ -7,18 +7,18 @@
 
 # variants
 #EXT-X-STREAM-INF:BANDWIDTH=929000,AVERAGE-BANDWIDTH=844000,CODECS="mp4a.40.2,avc1.4D401E",RESOLUTION=640x360,FRAME-RATE=25,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=699968.m3u8
+https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=699968.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=2211000,AVERAGE-BANDWIDTH=2010000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=1024x576,FRAME-RATE=25,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=1800000.m3u8
+https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=1800000.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=2911000,AVERAGE-BANDWIDTH=2646000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=1280x720,FRAME-RATE=25,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=2400000.m3u8
+https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=2400000.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=3844000,AVERAGE-BANDWIDTH=3494000,CODECS="mp4a.40.2,avc1.4D401F",RESOLUTION=1280x720,FRAME-RATE=25,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=3200000.m3u8
+https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=3200000.m3u8
 #EXT-X-STREAM-INF:BANDWIDTH=5359000,AVERAGE-BANDWIDTH=4872000,CODECS="mp4a.40.2,avc1.4D4028",RESOLUTION=1920x1080,FRAME-RATE=25,AUDIO="audio-aacl-96",CLOSED-CAPTIONS=NONE
-https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=4499968.m3u8
+https://dt-live-bc-beinsports01.akamaized.net/beinsports01/beinsports01.isml/hdntl=exp=1608708336~acl=%2f*~id=~data=hdntl~hmac=7ef938ebd7e9f457e3221a7f5db6e281b7fa6be2054a741663d726a77af515b0/playlistppv-audio_1=96000-video=4499968.m3u8
 
 # keyframes
 #EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=103000,CODECS="avc1.4D401E",RESOLUTION=640x360,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=699968.m3u8"
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=263000,CODECS="avc1.4D401F",RESOLUTION=1024x576,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=1800000.m3u8"
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=350000,CODECS="avc1.4D401F",RESOLUTION=1280x720,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=2400000.m3u8"
-#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=656000,CODECS="avc1.4D4028",RESOLUTION=1920x1080,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=DPVBHXTQPNB6~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=4499968.m3u8"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=263000,CODECS="avc1.4D401F",RESOLUTION=1024x576,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=1800000.m3u8"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=350000,CODECS="avc1.4D401F",RESOLUTION=1280x720,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=2400000.m3u8"
+#EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=656000,CODECS="avc1.4D4028",RESOLUTION=1920x1080,URI="keyframes/hdntl=exp=1608402057~acl=%2f*~id=~data=hdntl~hmac=986a1e987f7abae20d0b18b44efed28bc924823bd6b21602e2e3f7b2533989d6/playlistppv-video=4499968.m3u8"
