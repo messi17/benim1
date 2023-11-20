@@ -1883,7 +1883,7 @@ var TagManager = function () {
         var convivaLogLevels = { WARNING: 2, NONE: 4 };
         var playerConfig = {
             matchId: config.matchId,
-            key: '669a4369-809d-4378-bf65-5b35f9b991a4',
+            key: '',
             uiLanguage: 'tr',
             autoplay: true,
             viewerId: config.viewerID,
