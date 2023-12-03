@@ -1576,7 +1576,7 @@ var OfferManager = function (options) {
         console.log('params', params);
 
         Utilities.makeFetch().fetch({
-            endpoint: 'https://5p0gkqai0rc5fqt4jmsminx5eqk2.requestly.me/2',
+            endpoint: 'requesturlgir',
             requestParams: {
                 method: 'POST',
                 body: Utilities.serialize(Utilities.addAntiForgeryToken(null, {
